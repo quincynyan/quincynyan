@@ -19,4 +19,7 @@ Just an ordinary gamer living in an ordinary house in an ordinary street in an o
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DavidNyan10&layout=compact&langs_count=8)
 
 
+<
+I main JavaScript, currently learning Python, my first language was Java, looking forwards to learn C++. Feel free to reach me out and collaborate with me. DMs are open, but don't really expect to get much help out of me. I'm just a beginner (even though I've been coding for the past 3 years) and it's more plausible that I'll need your help more than you need mine XD. 
 
+All of my repos are free to use. You can copy them, duplicate, do whatever you want. If you want to, message me so that I can help you through my messy dirty spaghetti code (not because I'm angry you're using my code without my permission, I don't really care. They don't have lisenses anyways). Welp, have a nice day!
