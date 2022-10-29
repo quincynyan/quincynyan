@@ -1,11 +1,11 @@
-- 👋 Hi, I’m @DavidNyan10
+- 👋 Hi, I’m @quincynyan
 - 👀 I’m interested in hentai
 - 🌱 I’m currently learning hentai
 - 💞️ I’m looking to collaborate on hentai (and dates 🥺💜)
-- 📫 How to reach me DavidNyan10#8581 on Discord
+- 📫 How to reach me QuincyNyan#6822 on Discord
 
 <!---
-DavidNyan10/DavidNyan10 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+quincynyan/quincynyan is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
 
@@ -13,10 +13,10 @@ You can click the Preview link to take a look at your changes.
 Just an ordinary gamer living in an ordinary house in an ordinary street in an ordinary town in an ordinary city in an ordinary state in an ordinary country in an ordinary continent in an ordinary planet in an ordinary Solar System in an ordinary galaxy in an ordinary universe, playing an ordinary game, Minecraft.
 
 
-![Metrics (Reload if you see this)](https://metrics.lecoq.io/DavidNyan10?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)
+![Metrics (Reload if you see this)](https://metrics.lecoq.io/quincynyan?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)
 
-![DavidNyan10's GitHub stats](https://github-readme-stats.vercel.app/api?username=DavidNyan10&show_icons=true&theme=dracula)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DavidNyan10&layout=compact&langs_count=8)
+![QuincyNyan's GitHub stats](https://github-readme-stats.vercel.app/api?username=quincynyan&show_icons=true&theme=dracula)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&layout=compact&langs_count=8)
 
 
 
