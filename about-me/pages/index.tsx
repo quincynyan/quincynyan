@@ -20,16 +20,18 @@ export default function Home(): JSX.Element {
 					</h1>
 				</header>
 				<ul className={`unol`}>
-					<li className={`orl`}>👋 Hi there, I&apos;m QuincyNyan!</li>
 					<li className={`orl`}>
-						👀 I&apos;m interested in all things kawaii and fun
+						👋 Hi there, I&#x2019;m QuincyNyan!
 					</li>
 					<li className={`orl`}>
-						🌱 I&apos;m currently learning new coding tricks and
+						👀 I&#x2019;m interested in all things kawaii and fun
+					</li>
+					<li className={`orl`}>
+						🌱 I&#x2019;m currently learning new coding tricks and
 						techniques
 					</li>
 					<li className={`orl`}>
-						💞️ I&apos;m looking to collaborate on cute projects
+						💞️ I&#x2019;m looking to collaborate on cute projects
 						(and maybe dates too 🥺💜)
 					</li>
 					<li className={`orl`}>
@@ -38,12 +40,13 @@ export default function Home(): JSX.Element {
 				</ul>
 
 				<p className="para">
-					I'm just an ordinary gamer living in a cute little house on
-					a cute little street in a cute little town in a cute little
-					city in a cute little state in a cute little country on a
-					cute little continent on a cute little planet in a cute
-					little Solar System in a cute little galaxy in a cute little
-					universe, playing an ordinary game called Minecraft.
+					I&apos;m just an ordinary gamer living in a cute little
+					house on a cute little street in a cute little town in a
+					cute little city in a cute little state in a cute little
+					country on a cute little continent on a cute little planet
+					in a cute little Solar System in a cute little galaxy in a
+					cute little universe, playing an ordinary game called
+					Minecraft.
 				</p>
 
 				<div className="para">
@@ -78,23 +81,24 @@ export default function Home(): JSX.Element {
 				</div>
 
 				<p className="para">
-					I mainly code in JavaScript, but I'm currently learning
-					Python too! My first language was Java, and I'm looking
+					I mainly code in JavaScript, but I&apos;m currently learning
+					Python too! My first language was Java, and I&apos;m looking
 					forward to learning C++ in the future. Feel free to reach
-					out to me and collaborate. DMs are always open, but don't
-					expect me to be a coding expert. Even though I've been
-					coding for the past 3 years, I still consider myself a
-					beginner, and I may need your help more than you need mine!
-					XD
+					out to me and collaborate. DMs are always open, but
+					don&apos;t expect me to be a coding expert. Even though
+					I&apos;ve been coding for the past 3 years, I still consider
+					myself a beginner, and I may need your help more than you
+					need mine! XD
 				</p>
 
 				<p className="para">
 					All of my repos are free to use. You can copy them,
 					duplicate them, do whatever you want with them! If you need
 					any help with my messy, dirty spaghetti code, just let me
-					know! I'm always happy to help (not because I'm angry you're
-					using my code without my permission, I really don't mind!).
-					Welp, have a super cute day! 😊🌸🌟
+					know! I&apos;m always happy to help (not because I&apos;m
+					angry you&apos;re using my code without my permission, I
+					really don&apos;t mind!). Welp, have a super cute day!
+					😊🌸🌟
 				</p>
 			</div>
 		</>
