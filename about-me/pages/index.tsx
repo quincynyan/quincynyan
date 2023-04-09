@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import MyComponent from "../pages/myScript.js";
 import Tooltip from "@/components/Tooltip";
+import Image from "next/image";
 
 export default function Home(): JSX.Element {
 	return (
@@ -19,17 +20,17 @@ export default function Home(): JSX.Element {
 					</h1>
 				</header>
 				<ul className={`unol`}>
-					<li className={`orl`}>👋 Hi there, I’m QuincyNyan!</li>
+					<li className={`orl`}>👋 Hi there, I&apos;m QuincyNyan!</li>
 					<li className={`orl`}>
-						👀 I’m interested in all things kawaii and fun
+						👀 I&apos;m interested in all things kawaii and fun
 					</li>
 					<li className={`orl`}>
-						🌱 I’m currently learning new coding tricks and
+						🌱 I&apos;m currently learning new coding tricks and
 						techniques
 					</li>
 					<li className={`orl`}>
-						💞️ I’m looking to collaborate on cute projects (and
-						maybe dates too 🥺💜)
+						💞️ I&apos;m looking to collaborate on cute projects
+						(and maybe dates too 🥺💜)
 					</li>
 					<li className={`orl`}>
 						📫 You can reach me at <Tooltip /> on Discord
@@ -47,22 +48,31 @@ export default function Home(): JSX.Element {
 
 				<div className="para">
 					<div className={styles.metrics}>
-						<img
+						<Image
 							src="https://metrics.lecoq.io/quincynyan?template=classic&amp;repositories.forks=true&amp;isocalendar=1&amp;activity=1&amp;isocalendar.duration=half-year&amp;activity.limit=5&amp;activity.load=300&amp;activity.days=14&amp;activity.filter=all&amp;activity.visibility=all&amp;activity.timestamps=false&amp;config.timezone=Asia%2FRangoon"
 							alt="Metrics (Reload if you see this)"
+							width={480}
+							height={918}
+							// unoptimized={true}
 						/>
 					</div>
 				</div>
 
 				<div className="para">
 					<div className={styles.stats}>
-						<img
+						<Image
 							src="https://github-readme-stats.vercel.app/api?username=quincynyan&amp;show_icons=true&amp;theme=dracula"
 							alt="QuincyNyan's GitHub stats"
+							width={467}
+							height={195}
+							// unoptimized={true}
 						/>
-						<img
+						<Image
 							src="https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&amp;layout=compact&amp;langs_count=8"
 							alt="Top Langs"
+							width={300}
+							height={190}
+							// unoptimized={true}
 						/>
 					</div>
 				</div>
