@@ -1,0 +1,11 @@
+{
+	"scripts": {
+		"predeploy": "cd about-me && npm run build",
+		"deploy": "gh-pages -d out"
+	},
+	"devDependencies": {
+		"gh-pages": "5.0.0"
+	},
+	"homepage": "https://quinc.nekonyan.fun"
+}
+
