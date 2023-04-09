@@ -56,7 +56,7 @@ export default function Home(): JSX.Element {
 							alt="Metrics (Reload if you see this)"
 							width={480}
 							height={918}
-							// unoptimized={true}
+							unoptimized={true}
 						/>
 					</div>
 				</div>
@@ -68,14 +68,14 @@ export default function Home(): JSX.Element {
 							alt="QuincyNyan's GitHub stats"
 							width={467}
 							height={195}
-							// unoptimized={true}
+							unoptimized={true}
 						/>
 						<Image
 							src="https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&amp;layout=compact&amp;langs_count=8"
 							alt="Top Langs"
 							width={300}
 							height={190}
-							// unoptimized={true}
+							unoptimized={true}
 						/>
 					</div>
 				</div>
