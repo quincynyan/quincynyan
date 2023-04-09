@@ -20,10 +20,18 @@ jobs:
           node-version: 16
           cache: npm
 
+# snip
       - name: Build
         run: |
           npm ci && cd about-me && npm i && cd ..
-          # configure the build here
+          cd about-me && npm run build && cd ..
+          cd about-me && npm run export && cd ..
+          cd about-me && touch out/.nojekyll
 
+# snip
       - name: Deploy
-        # configure an external GitHub Pages deploy workflow here
+        # https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@4.4.0 
+        with:
+          branch: gh-pages
+          folder: out
