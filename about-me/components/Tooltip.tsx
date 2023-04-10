@@ -28,7 +28,7 @@ function Tooltip() {
 					aria-expanded="false"
 					role="button"
 				>
-					@クインシー (子獅)
+					@クインシー (子獅)#6822
 				</span>
 				{tooltipVisible && (
 					// <div className="tooltip-33Jwqe tooltipTop-CgYHUZ tooltipGreen-cAApx5 tooltipDisablePointerEvents-3dgGo3">
