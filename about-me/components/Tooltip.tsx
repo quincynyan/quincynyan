@@ -18,7 +18,7 @@ function Tooltip() {
 	};
 
 	return (
-		<div>
+		<span>
 			<span
 				onClick={handleCopyClick}
 				onMouseLeave={() => setTooltipVisible(false)}
@@ -61,7 +61,7 @@ function Tooltip() {
 					</div>
 				)}
 			</span>
-		</div>
+		</span>
 	);
 }
 
