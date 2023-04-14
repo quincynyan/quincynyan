@@ -57,7 +57,7 @@ export default function Home(): JSX.Element {
 							fill
 							// width={480}
 							// height={918}
-							// unoptimized={true}
+							unoptimized={true}
 						/>
 					</div>
 				</div>
@@ -70,7 +70,7 @@ export default function Home(): JSX.Element {
 							fill
 							// width={467}
 							// height={195}
-							// unoptimized={true}
+							unoptimized={true}
 						/>
 						<Image
 							src="https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&amp;layout=compact&amp;langs_count=8"
@@ -78,7 +78,7 @@ export default function Home(): JSX.Element {
 							fill
 							// width={300}
 							// height={190}
-							// unoptimized={true}
+							unoptimized={true}
 						/>
 					</div>
 				</div>
