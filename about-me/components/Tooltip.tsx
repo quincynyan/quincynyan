@@ -24,11 +24,11 @@ function Tooltip() {
 				onMouseLeave={() => setTooltipVisible(false)}
 			>
 				<span
-					className="mention wrapper-1ZcZW- interactive"
+					className="discord-tag"
 					aria-expanded="false"
 					role="button"
 				>
-					@クインシー (子獅)#6822
+					@クインシー (小獅)#6822
 				</span>
 				{tooltipVisible && (
 					// <div className="tooltip-33Jwqe tooltipTop-CgYHUZ tooltipGreen-cAApx5 tooltipDisablePointerEvents-3dgGo3">

@@ -54,9 +54,10 @@ export default function Home(): JSX.Element {
 						<Image
 							src="https://metrics.lecoq.io/quincynyan?template=classic&amp;repositories.forks=true&amp;isocalendar=1&amp;activity=1&amp;isocalendar.duration=half-year&amp;activity.limit=5&amp;activity.load=300&amp;activity.days=14&amp;activity.filter=all&amp;activity.visibility=all&amp;activity.timestamps=false&amp;config.timezone=Asia%2FRangoon"
 							alt="Metrics (Reload if you see this)"
-							width={480}
-							height={918}
-							unoptimized={true}
+							fill
+							// width={480}
+							// height={918}
+							// unoptimized={true}
 						/>
 					</div>
 				</div>
@@ -66,16 +67,18 @@ export default function Home(): JSX.Element {
 						<Image
 							src="https://github-readme-stats.vercel.app/api?username=quincynyan&amp;show_icons=true&amp;theme=dracula"
 							alt="QuincyNyan's GitHub stats"
-							width={467}
-							height={195}
-							unoptimized={true}
+							fill
+							// width={467}
+							// height={195}
+							// unoptimized={true}
 						/>
 						<Image
 							src="https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&amp;layout=compact&amp;langs_count=8"
 							alt="Top Langs"
-							width={300}
-							height={190}
-							unoptimized={true}
+							fill
+							// width={300}
+							// height={190}
+							// unoptimized={true}
 						/>
 					</div>
 				</div>
