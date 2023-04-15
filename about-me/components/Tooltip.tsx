@@ -18,7 +18,12 @@ function Tooltip() {
 	};
 
 	return (
-		<span>
+		<span
+			style={{
+				position: "relative",
+				display: "inline-block"
+			}}
+		>
 			<span
 				onClick={handleCopyClick}
 				onMouseLeave={() => setTooltipVisible(false)}
@@ -38,25 +43,36 @@ function Tooltip() {
 					// 	></div>
 					// 	<div className="tooltipContent-38tm3I">Copied!</div>
 					// </div>
-					<div
-						className="theme-dark layer-2BGhQ8 disabledPointerEvents-cGr1My"
-						// style={{
-						// 	position: "absolute",
-						// 	bottom: 550.75,
-						// 	left: 185
-						// }}
-					>
-						<div
-							className="tooltip-33Jwqe tooltipTop-CgYHUZ tooltipGreen-cAApx5 tooltipDisablePointerEvents-3dgGo3"
-							style={{ opacity: 1, transform: "none" }}
-						>
-							<div
-								className="tooltipPointer-sMBQqe"
-								style={{ left: "calc(50% + 0px)" }}
-							></div>
-							<div className="tooltipContent-38tm3I">
-								<div>Copied!</div>
-							</div>
+
+					// ===================
+
+					// <div
+					// 	className="theme-dark layer-2BGhQ8 disabledPointerEvents-cGr1My"
+					// 	style={{
+					// 		position: "absolute",
+					// 		bottom: "100%",
+					// 		left: "50%",
+					// 		transform: "translateX(-50%) translateY(-50%)"
+					// 	}}
+					// >
+					// 	<div
+					// 		className="tooltip-33Jwqe tooltipTop-CgYHUZ tooltipGreen-cAApx5 tooltipDisablePointerEvents-3dgGo3"
+					// 		style={{ opacity: 1, transform: "none" }}
+					// 	>
+					// 		<div
+					// 			className="tooltipPointer-sMBQqe"
+					// 			style={{ left: "calc(50% + 0px)" }}
+					// 		></div>
+					// 		<div className="tooltipContent-38tm3I">
+					// 			<div>Copied!</div>
+					// 		</div>
+					// 	</div>
+					// </div>
+
+					<div className="tooltip-container">
+						<div className="tooltip">
+							<div className="tooltip-pointer"></div>
+							<div className="tooltip-content">Copied!</div>
 						</div>
 					</div>
 				)}
