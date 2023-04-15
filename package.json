@@ -2,8 +2,8 @@
 	"scripts": {
 		"predeploy": "cd about-me && npm run build",
 		"deploy": "gh-pages -d out",
-		"start": "cd about-me && npm run dev",
-		"publish": "git push origin master && cd about-me && npm run build && npm run export && npm run deploy"
+		"server": "cd about-me && npm run dev",
+		"push": "git push && cd about-me && npm run build && npm run export && npm run deploy"
 	},
 	"devDependencies": {
 		"gh-pages": "5.0.0"
