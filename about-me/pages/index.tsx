@@ -21,8 +21,7 @@ export default function Home(): JSX.Element {
 				</header>
 				<ul className={`unol`}>
 					<li className={`orl`}>
-						👋 Hi there, I&#x2019;m QuincyNyan! This is just a test
-						uwu
+						👋 Hi there, I&#x2019;m QuincyNyan!
 					</li>
 					<li className={`orl`}>
 						👀 I&#x2019;m interested in all things kawaii and fun
