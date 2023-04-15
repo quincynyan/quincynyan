@@ -72,3 +72,11 @@
 	border-top-color: hsl(145 calc(1 * 65%) 39.2%/1);
 	left: calc(50% + 0px);
 }
+
+.emoji {
+	display: inline-block;
+	width: auto;
+	height: 1em;
+	vertical-align: -0.125em;
+	transform: translateY(100%);
+}

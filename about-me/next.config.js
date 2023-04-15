@@ -5,7 +5,8 @@ const nextConfig = {
 		domains: [
 			"metrics.lecoq.io",
 			"github-readme-stats.vercel.app",
-			"localhost"
+			"localhost",
+			"twemoji.maxcdn.com"
 		],
 		formats: ["image/avif", "image/webp"],
 		loader: "imgix",

@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import MyComponent from "../pages/myScript.js";
 import Tooltip from "@/components/Tooltip";
 import Image from "next/image";
+import Twemoji from "@/components/Twemoji";
 
 export default function Home(): JSX.Element {
 	return (
@@ -21,21 +22,25 @@ export default function Home(): JSX.Element {
 				</header>
 				<ul className={`unol`}>
 					<li className={`orl`}>
-						👋 Hi there, I&#x2019;m QuincyNyan!
+						<Twemoji emoji="👋" /> Hi there, I&#x2019;m QuincyNyan!
 					</li>
 					<li className={`orl`}>
-						👀 I&#x2019;m interested in all things kawaii and fun
+						<Twemoji emoji="👀" /> I&#x2019;m interested in all
+						things kawaii and fun
 					</li>
 					<li className={`orl`}>
-						🌱 I&#x2019;m currently learning new coding tricks and
-						techniques
+						<Twemoji emoji="🌱" /> I&#x2019;m currently learning new
+						coding tricks and techniques
 					</li>
 					<li className={`orl`}>
-						💞️ I&#x2019;m looking to collaborate on cute projects
-						(and maybe dates too 🥺💜)
+						<Twemoji emoji="💞️" /> I&#x2019;m looking to
+						collaborate on cute projects (and maybe dates too{" "}
+						<Twemoji emoji="🥺" />
+						<Twemoji emoji="💜" />)
 					</li>
 					<li className={`orl`}>
-						📫 You can reach me at <Tooltip /> on Discord
+						<Twemoji emoji="📫" /> You can reach me at <Tooltip />{" "}
+						on Discord
 					</li>
 				</ul>
 
