@@ -1,7 +1,7 @@
 {
 	"scripts": {
 		"predeploy": "cd about-me && npm run build",
-		"deploy": "gh-pages -d out",
+		"deploy": "cd about-me && gh-pages -d out",
 		"server": "cd about-me && npm run dev",
 		"push": "git push && cd about-me && npm run build && npm run export && npm run deploy"
 	},
