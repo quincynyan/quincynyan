@@ -1,0 +1,48 @@
+name: Copy files to another branch
+
+on:
+    push:
+        branches:
+            - better-page
+    workflow_dispatch:
+
+permissions:
+    contents: write
+    pages: write
+    id-token: write
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: false
+
+jobs:
+    copy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout better-page
+              uses: actions/checkout@v3
+              with:
+                  ref: better-page
+
+            - name: Copy files 1
+              run: |
+                  git config --global user.name "GitHub Actions"
+                  git config --global user.email "action@github.com"
+                  git fetch origin better-page:better-page --update-head-ok
+                  # rsync -r --exclude=.git --exclude=.github --exclude=about-me --exclude=node_modules --exclude=simplified . simplified/
+                  find . -mindepth 1 -maxdepth 1 ! -name 'simplified' -exec cp {} simplified \;
+                  git add .
+                  git diff-index --quiet HEAD ||  git commit -am "create simplified directory"  # commit to the repository (ignore if no modification)
+                  git push origin better-page # push to remote branch
+
+            - name: Copy files 2
+              run: |
+                  git fetch origin gh-pages:gh-pages --update-head-ok
+                  git checkout --orphan gh-pages-temp
+                  git checkout better-page -- simplified
+                  mv simplified/* .
+                  git add .
+                  git commit -m "Copy files from better-page to gh-pages"
+                  git branch -D gh-pages
+                  git branch -m gh-pages
+                  git push origin gh-pages --force
