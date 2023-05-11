@@ -1,0 +1,4 @@
+[submodule "about-me/public/simplified"]
+	path = about-me/public/simplified
+	url = https://github.com/quincynyan/quincynyan.git
+	branch = simplified
