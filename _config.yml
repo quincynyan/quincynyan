@@ -1,0 +1,142 @@
+title: Quincy Nyan
+email: quinc@nekonyan.fun
+description: > # this means to ignore newlines until "baseurl:"
+    A blog about cats and stuff.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+url: "https://nekonyan.fun" # the base hostname & protocol for your site
+
+twitter_username: QuincyNyan
+github_username: quincynyan
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+    - jekyll-feed
+    - jekyll-paginate
+    - jemoji
+paginate: 5
+
+author: Quincy Nyan
+
+nav:
+    - title: Home
+      url: /
+    - title: About
+      url: /about/
+    - title: Archive
+      url: /archive/
+    - title: Tags
+      url: /tags/
+
+navbar-links:
+    About Me: "I'm a cat."
+    Links:
+        - Twitter: "https://twitter.com/QuincyNyan"
+        - GitHub: "https://github.com/QuincyNyan"
+    Author's home: "https://nekonyan.fun"
+
+avatar: "/assets/images/avatar.jpg"
+
+round-avatar: true
+
+social-network-links:
+    email: "mailto:quinc@nekonyan.fun"
+    rss: true
+    github: quincynyan
+    twitter: QuincyNyan
+    patreon: quincynyan
+    youtube: c/lyger_playz
+
+rss-description: "A blog about cats and stuff."
+
+share-link-active:
+    twitter: true
+    facebook: true
+    linkedin: true
+    vk: false
+
+url-pretty: "nekonyan.fun"
+
+excerpt_length: 50
+
+feed_show_excerpt: true
+
+feed_show_tags: true
+
+post_search: true
+
+edit_page_button: true
+
+navbar-var-length: false
+
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+
+date_format: "%B %-d, %Y"
+
+timezone: "America/New_York"
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+kramdown:
+    input: GFM
+    hard_wrap: false
+    gfm_emojis: false
+    auto_id_prefix: "id-"
+    auto_id_stripping: false
+    auto_ids: true
+    entity_output: as_char
+    footnote_backlink: ↩
+    footnote_backlink_inline: "false"
+    footnote_nr: 1
+    footnote_prefix: fn
+    header_offset: 0
+    html_to_native: false
+    latex_headers: section,subsection,subsubsection,paragraph,subparagraph,subparagraph
+    line_width: 72
+    math_engine: mathjax
+    parse_block_html: false
+    parse_span_html: true
+    remove_block_html_tags: true
+    remove_line_breaks_for_cjk: false
+    remove_span_html_tags: false
+    smart_quotes: lsquo,rsquo,ldquo,rdquo
+    syntax_highlighter: rouge
+    template: default
+    transliterated_header_ids: false
+
+defaults:
+    - scope:
+          path: ""
+          type: "posts"
+      values:
+          layout: "post"
+          comments: true # add comments to all blog posts
+          social-share: true # add social media sharing buttons to all blog posts
+    - scope:
+          path: "" # any file that's not a post will be a "page" layout by default
+      values:
+          layout: "page"
+
+exclude:
+    - CHANGELOG.md
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - screenshot.png
+    - docs/
+    - _next/
