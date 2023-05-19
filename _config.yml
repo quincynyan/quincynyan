@@ -180,3 +180,4 @@ include:
     - _next/static/development/_ssgManifest.js.map
     - _next/static/development/_buildManifest.map
     - _next/static/development/_ssgManifest.map
+    - _next/**/*.js
