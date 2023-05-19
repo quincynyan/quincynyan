@@ -141,4 +141,10 @@ exclude:
     - docs/
 
 include:
+    - _next
     - _next/**/*
+    - _next/**
+    - _next/*
+    - _next/**/**/*
+    - _next/**/**/**
+    - _next/**/**/**/*
