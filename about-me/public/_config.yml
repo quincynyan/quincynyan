@@ -142,3 +142,41 @@ exclude:
 
 include:
     - _next
+    - _next/**/*
+    - _next/static
+    - _next/static/**/*
+    - _next/static/chunks
+    - _next/static/chunks/**/*
+    - _next/static/css
+    - _next/static/css/**/*
+    - _next/static/runtime
+    - _next/static/runtime/**/*
+    - _next/static/webpack
+    - _next/static/webpack/**/*
+    - _next/static/media
+    - _next/static/media/**/*
+    - _next/static/development
+    - _next/static/development/**/*
+    - _next/static/development/_devPagesManifest.json
+    - _next/static/development/_buildManifest.json
+    - _next/static/development/_ssgManifest.json
+    - _next/static/development/pages
+    - _next/static/development/pages/**/*
+    - _next/static/development/dll
+    - _next/static/development/dll/**/*
+    - _next/static/development/css
+    - _next/static/development/css/**/*
+    - _next/static/development/runtime
+    - _next/static/development/runtime/**/*
+    - _next/static/development/webpack
+    - _next/static/development/webpack/**/*
+    - _next/static/development/media
+    - _next/static/development/media/**/*
+    - _next/static/development/_buildManifest.js
+    - _next/static/development/_ssgManifest.js
+    - _next/static/development/_buildManifest
+    - _next/static/development/_ssgManifest
+    - _next/static/development/_buildManifest.js.map
+    - _next/static/development/_ssgManifest.js.map
+    - _next/static/development/_buildManifest.map
+    - _next/static/development/_ssgManifest.map
