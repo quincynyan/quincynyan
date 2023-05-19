@@ -139,4 +139,6 @@ exclude:
     - README.md
     - screenshot.png
     - docs/
+
+include:
     - _next/
