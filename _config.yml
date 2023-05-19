@@ -257,3 +257,7 @@ include:
     - _next/static/**/*/_buildManifest.module.js.map
     - _next/static/**/*/_buildManifest.module
     - _next/static/**/*/_buildManifest.module.map
+    - _ssgManifest.js
+    - _app-*.js
+    - _buildManifest.js
+    - _error-*.js
