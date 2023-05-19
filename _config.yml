@@ -261,3 +261,4 @@ include:
     - _app-*.js
     - _buildManifest.js
     - _error-*.js
+    - _app-*.js.download
