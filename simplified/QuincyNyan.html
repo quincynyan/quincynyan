@@ -1,7 +1,609 @@
 <!DOCTYPE html>
 <!-- saved from url=(0014)about:internet -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width"><title>QuincyNyan</title><meta name="next-head-count" content="3"><link rel="stylesheet" href="./QuincyNyan_files/inter.css"><link rel="stylesheet" href="./QuincyNyan_files/new.min.css"><link rel="preload" href="./QuincyNyan_files/aa040c7cabd892a0.css" as="style"><link rel="stylesheet" href="./QuincyNyan_files/aa040c7cabd892a0.css" data-n-g=""><link rel="preload" href="./QuincyNyan_files/113b30d555b9361c.css" as="style"><link rel="stylesheet" href="./QuincyNyan_files/113b30d555b9361c.css" data-n-p=""><noscript data-n-css=""></noscript><script defer="" nomodule="" src="./QuincyNyan_files/polyfills-c67a75d1b6f99dc8.js.download"></script><script src="./QuincyNyan_files/webpack-8fa1640cc84ba8fe.js.download" defer=""></script><script src="./QuincyNyan_files/framework-2c79e2a64abdb08b.js.download" defer=""></script><script src="./QuincyNyan_files/main-22c786f96bd1d3f5.js.download" defer=""></script><script src="./QuincyNyan_files/_app-bb8d61b1b15701b6.js.download" defer=""></script><script src="./QuincyNyan_files/959-afb1bc3ab2acc453.js.download" defer=""></script><script src="./QuincyNyan_files/index-0b4daaa2d7643ac8.js.download" defer=""></script><script src="./QuincyNyan_files/_buildManifest.js.download" defer=""></script><script src="./QuincyNyan_files/_ssgManifest.js.download" defer=""></script><style type="text/css" id="operaUserStyle">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width"><title>QuincyNyan</title><meta name="next-head-count" content="3"><link rel="stylesheet" href="./QuincyNyan_files/inter.css"><link rel="stylesheet" href="./QuincyNyan_files/new.min.css"><noscript data-n-css=""></noscript><script defer="" nomodule="" src="./QuincyNyan_files/polyfills.js.download"></script><script src="./QuincyNyan_files/webpack.js.download" defer=""></script><script src="./QuincyNyan_files/main.js.download" defer=""></script><script src="./QuincyNyan_files/_app.js.download" defer=""></script><script src="./QuincyNyan_files/index.js.download" defer=""></script><script src="./QuincyNyan_files/_buildManifest.js.download" defer=""></script><script src="./QuincyNyan_files/_ssgManifest.js.download" defer=""></script><style>:root {
+	--foreground-rgb: 255, 255, 255;
+	--background-start-rgb: 0, 0, 0;
+	--background-end-rgb: 0, 0, 0;
+
+	--primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+	--secondary-glow: linear-gradient(
+		to bottom right,
+		rgba(1, 65, 255, 0),
+		rgba(1, 65, 255, 0),
+		rgba(1, 65, 255, 0.3)
+	);
+
+	--tile-start-rgb: 2, 13, 46;
+	--tile-end-rgb: 2, 5, 19;
+	--tile-border: conic-gradient(
+		#ffffff80,
+		#ffffff40,
+		#ffffff30,
+		#ffffff20,
+		#ffffff10,
+		#ffffff10,
+		#ffffff80
+	);
+
+	--callout-rgb: 20, 20, 20;
+	--callout-border-rgb: 108, 108, 108;
+	--card-rgb: 100, 100, 100;
+	--card-border-rgb: 200, 200, 200;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--max-width: 1100px;
+		--border-radius: 12px;
+		--font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono",
+			"Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+			"Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New",
+			monospace;
+
+		--foreground-rgb: 0, 0, 0;
+		--background-start-rgb: 214, 219, 220;
+		--background-end-rgb: 255, 255, 255;
+
+		--primary-glow: conic-gradient(
+			from 180deg at 50% 50%,
+			#16abff33 0deg,
+			#0885ff33 55deg,
+			#54d6ff33 120deg,
+			#0071ff33 160deg,
+			transparent 360deg
+		);
+		--secondary-glow: radial-gradient(
+			rgba(255, 255, 255, 1),
+			rgba(255, 255, 255, 0)
+		);
+
+		--tile-start-rgb: 239, 245, 249;
+		--tile-end-rgb: 228, 232, 233;
+		--tile-border: conic-gradient(
+			#00000080,
+			#00000040,
+			#00000030,
+			#00000020,
+			#00000010,
+			#00000010,
+			#00000080
+		);
+
+		--callout-rgb: 238, 240, 241;
+		--callout-border-rgb: 172, 175, 176;
+		--card-rgb: 180, 185, 188;
+		--card-border-rgb: 131, 134, 135;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdHlsZXMvZ2xvYmFscy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQywrQkFBK0I7Q0FDL0IsK0JBQStCO0NBQy9CLDZCQUE2Qjs7Q0FFN0IsMkVBQTJFO0NBQzNFOzs7OztFQUtDOztDQUVELDJCQUEyQjtDQUMzQix3QkFBd0I7Q0FDeEI7Ozs7Ozs7O0VBUUM7O0NBRUQseUJBQXlCO0NBQ3pCLG1DQUFtQztDQUNuQyx5QkFBeUI7Q0FDekIsZ0NBQWdDO0FBQ2pDOztBQUVBO0NBQ0M7RUFDQyxtQkFBbUI7RUFDbkIscUJBQXFCO0VBQ3JCOzs7WUFHVTs7RUFFVix5QkFBeUI7RUFDekIscUNBQXFDO0VBQ3JDLG1DQUFtQzs7RUFFbkM7Ozs7Ozs7R0FPQztFQUNEOzs7R0FHQzs7RUFFRCwrQkFBK0I7RUFDL0IsNkJBQTZCO0VBQzdCOzs7Ozs7OztHQVFDOztFQUVELDRCQUE0QjtFQUM1QixtQ0FBbUM7RUFDbkMseUJBQXlCO0VBQ3pCLGdDQUFnQztDQUNqQztBQUNEOztBQUVBO0NBQ0Msc0JBQXNCO0NBQ3RCLFVBQVU7Q0FDVixTQUFTO0FBQ1Y7O0FBRUE7O0NBRUMsZ0JBQWdCO0NBQ2hCLGtCQUFrQjtBQUNuQjs7QUFFQTtDQUNDLGlDQUFpQztDQUNqQzs7Ozs7a0NBS2lDO0FBQ2xDOztBQUVBO0NBQ0MsY0FBYztDQUNkLHFCQUFxQjtBQUN0Qjs7QUFFQTtDQUNDO0VBQ0Msa0JBQWtCO0NBQ25CO0FBQ0QiLCJzb3VyY2VzQ29udGVudCI6WyI6cm9vdCB7XHJcblx0LS1mb3JlZ3JvdW5kLXJnYjogMjU1LCAyNTUsIDI1NTtcclxuXHQtLWJhY2tncm91bmQtc3RhcnQtcmdiOiAwLCAwLCAwO1xyXG5cdC0tYmFja2dyb3VuZC1lbmQtcmdiOiAwLCAwLCAwO1xyXG5cclxuXHQtLXByaW1hcnktZ2xvdzogcmFkaWFsLWdyYWRpZW50KHJnYmEoMSwgNjUsIDI1NSwgMC40KSwgcmdiYSgxLCA2NSwgMjU1LCAwKSk7XHJcblx0LS1zZWNvbmRhcnktZ2xvdzogbGluZWFyLWdyYWRpZW50KFxyXG5cdFx0dG8gYm90dG9tIHJpZ2h0LFxyXG5cdFx0cmdiYSgxLCA2NSwgMjU1LCAwKSxcclxuXHRcdHJnYmEoMSwgNjUsIDI1NSwgMCksXHJcblx0XHRyZ2JhKDEsIDY1LCAyNTUsIDAuMylcclxuXHQpO1xyXG5cclxuXHQtLXRpbGUtc3RhcnQtcmdiOiAyLCAxMywgNDY7XHJcblx0LS10aWxlLWVuZC1yZ2I6IDIsIDUsIDE5O1xyXG5cdC0tdGlsZS1ib3JkZXI6IGNvbmljLWdyYWRpZW50KFxyXG5cdFx0I2ZmZmZmZjgwLFxyXG5cdFx0I2ZmZmZmZjQwLFxyXG5cdFx0I2ZmZmZmZjMwLFxyXG5cdFx0I2ZmZmZmZjIwLFxyXG5cdFx0I2ZmZmZmZjEwLFxyXG5cdFx0I2ZmZmZmZjEwLFxyXG5cdFx0I2ZmZmZmZjgwXHJcblx0KTtcclxuXHJcblx0LS1jYWxsb3V0LXJnYjogMjAsIDIwLCAyMDtcclxuXHQtLWNhbGxvdXQtYm9yZGVyLXJnYjogMTA4LCAxMDgsIDEwODtcclxuXHQtLWNhcmQtcmdiOiAxMDAsIDEwMCwgMTAwO1xyXG5cdC0tY2FyZC1ib3JkZXItcmdiOiAyMDAsIDIwMCwgMjAwO1xyXG59XHJcblxyXG5AbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBsaWdodCkge1xyXG5cdDpyb290IHtcclxuXHRcdC0tbWF4LXdpZHRoOiAxMTAwcHg7XHJcblx0XHQtLWJvcmRlci1yYWRpdXM6IDEycHg7XHJcblx0XHQtLWZvbnQtbW9ubzogdWktbW9ub3NwYWNlLCBNZW5sbywgTW9uYWNvLCBcIkNhc2NhZGlhIE1vbm9cIixcclxuXHRcdFx0XCJTZWdvZSBVSSBNb25vXCIsIFwiUm9ib3RvIE1vbm9cIiwgXCJPeHlnZW4gTW9ub1wiLCBcIlVidW50dSBNb25vc3BhY2VcIixcclxuXHRcdFx0XCJTb3VyY2UgQ29kZSBQcm9cIiwgXCJGaXJhIE1vbm9cIiwgXCJEcm9pZCBTYW5zIE1vbm9cIiwgXCJDb3VyaWVyIE5ld1wiLFxyXG5cdFx0XHRtb25vc3BhY2U7XHJcblxyXG5cdFx0LS1mb3JlZ3JvdW5kLXJnYjogMCwgMCwgMDtcclxuXHRcdC0tYmFja2dyb3VuZC1zdGFydC1yZ2I6IDIxNCwgMjE5LCAyMjA7XHJcblx0XHQtLWJhY2tncm91bmQtZW5kLXJnYjogMjU1LCAyNTUsIDI1NTtcclxuXHJcblx0XHQtLXByaW1hcnktZ2xvdzogY29uaWMtZ3JhZGllbnQoXHJcblx0XHRcdGZyb20gMTgwZGVnIGF0IDUwJSA1MCUsXHJcblx0XHRcdCMxNmFiZmYzMyAwZGVnLFxyXG5cdFx0XHQjMDg4NWZmMzMgNTVkZWcsXHJcblx0XHRcdCM1NGQ2ZmYzMyAxMjBkZWcsXHJcblx0XHRcdCMwMDcxZmYzMyAxNjBkZWcsXHJcblx0XHRcdHRyYW5zcGFyZW50IDM2MGRlZ1xyXG5cdFx0KTtcclxuXHRcdC0tc2Vjb25kYXJ5LWdsb3c6IHJhZGlhbC1ncmFkaWVudChcclxuXHRcdFx0cmdiYSgyNTUsIDI1NSwgMjU1LCAxKSxcclxuXHRcdFx0cmdiYSgyNTUsIDI1NSwgMjU1LCAwKVxyXG5cdFx0KTtcclxuXHJcblx0XHQtLXRpbGUtc3RhcnQtcmdiOiAyMzksIDI0NSwgMjQ5O1xyXG5cdFx0LS10aWxlLWVuZC1yZ2I6IDIyOCwgMjMyLCAyMzM7XHJcblx0XHQtLXRpbGUtYm9yZGVyOiBjb25pYy1ncmFkaWVudChcclxuXHRcdFx0IzAwMDAwMDgwLFxyXG5cdFx0XHQjMDAwMDAwNDAsXHJcblx0XHRcdCMwMDAwMDAzMCxcclxuXHRcdFx0IzAwMDAwMDIwLFxyXG5cdFx0XHQjMDAwMDAwMTAsXHJcblx0XHRcdCMwMDAwMDAxMCxcclxuXHRcdFx0IzAwMDAwMDgwXHJcblx0XHQpO1xyXG5cclxuXHRcdC0tY2FsbG91dC1yZ2I6IDIzOCwgMjQwLCAyNDE7XHJcblx0XHQtLWNhbGxvdXQtYm9yZGVyLXJnYjogMTcyLCAxNzUsIDE3NjtcclxuXHRcdC0tY2FyZC1yZ2I6IDE4MCwgMTg1LCAxODg7XHJcblx0XHQtLWNhcmQtYm9yZGVyLXJnYjogMTMxLCAxMzQsIDEzNTtcclxuXHR9XHJcbn1cclxuXHJcbioge1xyXG5cdGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcblx0cGFkZGluZzogMDtcclxuXHRtYXJnaW46IDA7XHJcbn1cclxuXHJcbmh0bWwsXHJcbmJvZHkge1xyXG5cdG1heC13aWR0aDogMTAwdnc7XHJcblx0b3ZlcmZsb3cteDogaGlkZGVuO1xyXG59XHJcblxyXG5ib2R5IHtcclxuXHRjb2xvcjogcmdiKHZhcigtLWZvcmVncm91bmQtcmdiKSk7XHJcblx0YmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KFxyXG5cdFx0XHR0byBib3R0b20sXHJcblx0XHRcdHRyYW5zcGFyZW50LFxyXG5cdFx0XHRyZ2IodmFyKC0tYmFja2dyb3VuZC1lbmQtcmdiKSlcclxuXHRcdClcclxuXHRcdHJnYih2YXIoLS1iYWNrZ3JvdW5kLXN0YXJ0LXJnYikpO1xyXG59XHJcblxyXG5hIHtcclxuXHRjb2xvcjogaW5oZXJpdDtcclxuXHR0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHtcclxuXHRodG1sIHtcclxuXHRcdGNvbG9yLXNjaGVtZTogZGFyaztcclxuXHR9XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.discord-tag {
+	border-radius: 3px;
+	padding: 0 2px;
+	transition: background-color 50ms ease-out, color 50ms ease-out;
+	cursor: pointer;
+	font-weight: 500;
+	unicode-bidi: plaintext;
+	color: 235 calc(1 * 86.2%) 88.6%;
+	background: hsl(235 calc(1 * 85.6%) 64.7%/0.3);
+}
+
+.discord-tag:hover {
+	text-decoration: underline;
+	color: hsl(0 calc(1 * 0%) 100%/1);
+	background-color: hsl(235 calc(1 * 85.6%) 64.7%/1);
+}
+
+.tooltip-container {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.tooltip,
+.tooltip-content,
+.tooltip-pointer {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	word-wrap: break-word;
+	pointer-events: none;
+	color: hsl(0 calc(1 * 0%) 100%/1);
+	box-sizing: border-box;
+}
+
+.tooltip {
+	position: relative;
+	border-radius: 5px;
+	max-width: 190px;
+	padding: 0;
+	margin: 0;
+	transform-origin: 50% 100%;
+	box-shadow: 0 8px 16px hsl(0 calc(1 * 0%) 0%/0.24);
+	opacity: 1;
+	transform: none;
+	background-color: hsl(145 calc(1 * 65%) 39.2%/1);
+	z-index: 1002;
+	will-change: opacity, transform;
+}
+
+.tooltip-content {
+	margin: 0;
+	padding: 8px 12px;
+	overflow: hidden;
+}
+
+.tooltip-pointer {
+	padding: 0;
+	margin: 0;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	position: absolute;
+	top: 100%;
+	margin-left: -5px;
+	border-top-color: hsl(145 calc(1 * 65%) 39.2%/1);
+	left: calc(50% + 0px);
+}
+
+.emoji {
+	display: inline-block;
+	width: auto;
+	height: 1em;
+	vertical-align: -0.125em;
+	transform: translateY(100%);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdHlsZXMvc3R5bGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLGtCQUFrQjtDQUNsQixjQUFjO0NBRWQsK0RBQStEO0NBQy9ELGVBQWU7Q0FDZixnQkFBZ0I7Q0FFaEIsdUJBQXVCO0NBQ3ZCLGdDQUFnQztDQUNoQyw4Q0FBOEM7QUFDL0M7O0FBRUE7Q0FDQywwQkFBMEI7Q0FDMUIsaUNBQWlDO0NBQ2pDLGtEQUFrRDtBQUNuRDs7QUFFQTtDQUNDLGtCQUFrQjtDQUNsQixZQUFZO0NBQ1osU0FBUztDQUNULDRDQUE0QztBQUM3Qzs7QUFFQTs7O0NBR0MsZ0JBQWdCO0NBQ2hCLGVBQWU7Q0FDZixpQkFBaUI7Q0FDakIscUJBQXFCO0NBQ3JCLG9CQUFvQjtDQUNwQixpQ0FBaUM7Q0FFakMsc0JBQXNCO0FBQ3ZCOztBQUVBO0NBQ0Msa0JBQWtCO0NBQ2xCLGtCQUFrQjtDQUNsQixnQkFBZ0I7Q0FDaEIsVUFBVTtDQUNWLFNBQVM7Q0FFVCwwQkFBMEI7Q0FFMUIsa0RBQWtEO0NBQ2xELFVBQVU7Q0FDVixlQUFlO0NBQ2YsZ0RBQWdEO0NBQ2hELGFBQWE7Q0FDYiwrQkFBK0I7QUFDaEM7O0FBRUE7Q0FDQyxTQUFTO0NBQ1QsaUJBQWlCO0NBQ2pCLGdCQUFnQjtBQUNqQjs7QUFFQTtDQUNDLFVBQVU7Q0FDVixTQUFTO0NBQ1QsUUFBUTtDQUNSLFNBQVM7Q0FDVCw2QkFBNkI7Q0FDN0Isa0JBQWtCO0NBQ2xCLFNBQVM7Q0FDVCxpQkFBaUI7Q0FDakIsZ0RBQWdEO0NBQ2hELHFCQUFxQjtBQUN0Qjs7QUFFQTtDQUNDLHFCQUFxQjtDQUNyQixXQUFXO0NBQ1gsV0FBVztDQUNYLHdCQUF3QjtDQUN4QiwyQkFBMkI7QUFDNUIiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlzY29yZC10YWcge1xyXG5cdGJvcmRlci1yYWRpdXM6IDNweDtcclxuXHRwYWRkaW5nOiAwIDJweDtcclxuXHQtd2Via2l0LXRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgNTBtcyBlYXNlLW91dCwgY29sb3IgNTBtcyBlYXNlLW91dDtcclxuXHR0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDUwbXMgZWFzZS1vdXQsIGNvbG9yIDUwbXMgZWFzZS1vdXQ7XHJcblx0Y3Vyc29yOiBwb2ludGVyO1xyXG5cdGZvbnQtd2VpZ2h0OiA1MDA7XHJcblx0dW5pY29kZS1iaWRpOiAtbW96LXBsYWludGV4dDtcclxuXHR1bmljb2RlLWJpZGk6IHBsYWludGV4dDtcclxuXHRjb2xvcjogMjM1IGNhbGMoMSAqIDg2LjIlKSA4OC42JTtcclxuXHRiYWNrZ3JvdW5kOiBoc2woMjM1IGNhbGMoMSAqIDg1LjYlKSA2NC43JS8wLjMpO1xyXG59XHJcblxyXG4uZGlzY29yZC10YWc6aG92ZXIge1xyXG5cdHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG5cdGNvbG9yOiBoc2woMCBjYWxjKDEgKiAwJSkgMTAwJS8xKTtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiBoc2woMjM1IGNhbGMoMSAqIDg1LjYlKSA2NC43JS8xKTtcclxufVxyXG5cclxuLnRvb2x0aXAtY29udGFpbmVyIHtcclxuXHRwb3NpdGlvbjogYWJzb2x1dGU7XHJcblx0Ym90dG9tOiAxMDAlO1xyXG5cdGxlZnQ6IDUwJTtcclxuXHR0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSkgdHJhbnNsYXRlWSgtNTAlKTtcclxufVxyXG5cclxuLnRvb2x0aXAsXHJcbi50b29sdGlwLWNvbnRlbnQsXHJcbi50b29sdGlwLXBvaW50ZXIge1xyXG5cdGZvbnQtd2VpZ2h0OiA1MDA7XHJcblx0Zm9udC1zaXplOiAxNHB4O1xyXG5cdGxpbmUtaGVpZ2h0OiAxNnB4O1xyXG5cdHdvcmQtd3JhcDogYnJlYWstd29yZDtcclxuXHRwb2ludGVyLWV2ZW50czogbm9uZTtcclxuXHRjb2xvcjogaHNsKDAgY2FsYygxICogMCUpIDEwMCUvMSk7XHJcblx0LXdlYmtpdC1ib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG5cdGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbn1cclxuXHJcbi50b29sdGlwIHtcclxuXHRwb3NpdGlvbjogcmVsYXRpdmU7XHJcblx0Ym9yZGVyLXJhZGl1czogNXB4O1xyXG5cdG1heC13aWR0aDogMTkwcHg7XHJcblx0cGFkZGluZzogMDtcclxuXHRtYXJnaW46IDA7XHJcblx0LXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgMTAwJTtcclxuXHR0cmFuc2Zvcm0tb3JpZ2luOiA1MCUgMTAwJTtcclxuXHQtd2Via2l0LWJveC1zaGFkb3c6IDAgOHB4IDE2cHggaHNsKDAgY2FsYygxICogMCUpIDAlLzAuMjQpO1xyXG5cdGJveC1zaGFkb3c6IDAgOHB4IDE2cHggaHNsKDAgY2FsYygxICogMCUpIDAlLzAuMjQpO1xyXG5cdG9wYWNpdHk6IDE7XHJcblx0dHJhbnNmb3JtOiBub25lO1xyXG5cdGJhY2tncm91bmQtY29sb3I6IGhzbCgxNDUgY2FsYygxICogNjUlKSAzOS4yJS8xKTtcclxuXHR6LWluZGV4OiAxMDAyO1xyXG5cdHdpbGwtY2hhbmdlOiBvcGFjaXR5LCB0cmFuc2Zvcm07XHJcbn1cclxuXHJcbi50b29sdGlwLWNvbnRlbnQge1xyXG5cdG1hcmdpbjogMDtcclxuXHRwYWRkaW5nOiA4cHggMTJweDtcclxuXHRvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcblxyXG4udG9vbHRpcC1wb2ludGVyIHtcclxuXHRwYWRkaW5nOiAwO1xyXG5cdG1hcmdpbjogMDtcclxuXHR3aWR0aDogMDtcclxuXHRoZWlnaHQ6IDA7XHJcblx0Ym9yZGVyOiA1cHggc29saWQgdHJhbnNwYXJlbnQ7XHJcblx0cG9zaXRpb246IGFic29sdXRlO1xyXG5cdHRvcDogMTAwJTtcclxuXHRtYXJnaW4tbGVmdDogLTVweDtcclxuXHRib3JkZXItdG9wLWNvbG9yOiBoc2woMTQ1IGNhbGMoMSAqIDY1JSkgMzkuMiUvMSk7XHJcblx0bGVmdDogY2FsYyg1MCUgKyAwcHgpO1xyXG59XHJcblxyXG4uZW1vamkge1xyXG5cdGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuXHR3aWR0aDogYXV0bztcclxuXHRoZWlnaHQ6IDFlbTtcclxuXHR2ZXJ0aWNhbC1hbGlnbjogLTAuMTI1ZW07XHJcblx0dHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwMCUpO1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.Home_main__nLjiQ {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6rem;
+	min-height: 100vh;
+}
+
+.Home_description__41Owk {
+	display: inherit;
+	justify-content: inherit;
+	align-items: inherit;
+	font-size: 0.85rem;
+	max-width: var(--max-width);
+	width: 100%;
+	z-index: 2;
+	font-family: var(--font-mono);
+}
+
+.Home_description__41Owk a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.Home_description__41Owk p {
+	position: relative;
+	margin: 0;
+	padding: 1rem;
+	background-color: rgba(var(--callout-rgb), 0.5);
+	border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+	border-radius: var(--border-radius);
+}
+
+.Home_code__suPER {
+	font-weight: 700;
+	font-family: var(--font-mono);
+}
+
+.Home_grid__GxQ85 {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(25%, auto));
+	width: var(--max-width);
+	max-width: 100%;
+}
+
+.Home_card___LpL1 {
+	padding: 1rem 1.2rem;
+	border-radius: var(--border-radius);
+	background: rgba(var(--card-rgb), 0);
+	border: 1px solid rgba(var(--card-border-rgb), 0);
+	transition: background 200ms, border 200ms;
+}
+
+.Home_card___LpL1 span {
+	display: inline-block;
+	transition: transform 200ms;
+}
+
+.Home_card___LpL1 h2 {
+	font-weight: 600;
+	margin-bottom: 0.7rem;
+}
+
+.Home_card___LpL1 p {
+	margin: 0;
+	opacity: 0.6;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	max-width: 30ch;
+}
+
+.Home_center__4BFgC {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 4rem 0;
+}
+
+.Home_center__4BFgC::before {
+	background: var(--secondary-glow);
+	border-radius: 50%;
+	width: 480px;
+	height: 360px;
+	margin-left: -400px;
+}
+
+.Home_center__4BFgC::after {
+	background: var(--primary-glow);
+	width: 240px;
+	height: 180px;
+	z-index: -1;
+}
+
+.Home_center__4BFgC::before,
+.Home_center__4BFgC::after {
+	content: "";
+	left: 50%;
+	position: absolute;
+	filter: blur(45px);
+	transform: translateZ(0);
+}
+
+.Home_logo__27_tb,
+.Home_thirteen__cMI_k {
+	position: relative;
+}
+
+.Home_thirteen__cMI_k {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+	padding: 25px 10px;
+	margin-left: 16px;
+	transform: translateZ(0);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	box-shadow: 0px 2px 8px -1px #0000001a;
+}
+
+.Home_thirteen__cMI_k::before,
+.Home_thirteen__cMI_k::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+}
+
+/* Conic Gradient Animation */
+.Home_thirteen__cMI_k::before {
+	animation: 6s Home_rotate____XsI linear infinite;
+	width: 200%;
+	height: 200%;
+	background: var(--tile-border);
+}
+
+/* Inner Square */
+.Home_thirteen__cMI_k::after {
+	inset: 0;
+	padding: 1px;
+	border-radius: var(--border-radius);
+	background: linear-gradient(
+		to bottom right,
+		rgba(var(--tile-start-rgb), 1),
+		rgba(var(--tile-end-rgb), 1)
+	);
+	background-clip: content-box;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.Home_card___LpL1:hover {
+		background: rgba(var(--card-rgb), 0.1);
+		border: 1px solid rgba(var(--card-border-rgb), 0.15);
+	}
+
+	.Home_card___LpL1:hover span {
+		transform: translateX(4px);
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.Home_thirteen__cMI_k::before {
+		animation: none;
+	}
+
+	.Home_card___LpL1:hover span {
+		transform: none;
+	}
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+	.Home_content__Zy02X {
+		padding: 4rem;
+	}
+
+	.Home_grid__GxQ85 {
+		grid-template-columns: 1fr;
+		margin-bottom: 120px;
+		max-width: 320px;
+		text-align: center;
+	}
+
+	.Home_card___LpL1 {
+		padding: 1rem 2.5rem;
+	}
+
+	.Home_card___LpL1 h2 {
+		margin-bottom: 0.5rem;
+	}
+
+	.Home_center__4BFgC {
+		padding: 8rem 0 6rem;
+	}
+
+	.Home_center__4BFgC::before {
+		transform: none;
+		height: 300px;
+	}
+
+	.Home_description__41Owk {
+		font-size: 0.8rem;
+	}
+
+	.Home_description__41Owk a {
+		padding: 1rem;
+	}
+
+	.Home_description__41Owk p,
+	.Home_description__41Owk div {
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		width: 100%;
+	}
+
+	.Home_description__41Owk p {
+		align-items: center;
+		inset: 0 0 auto;
+		padding: 2rem 1rem 1.4rem;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+		background: linear-gradient(
+			to bottom,
+			rgba(var(--background-start-rgb), 1),
+			rgba(var(--callout-rgb), 0.5)
+		);
+		background-clip: padding-box;
+		-webkit-backdrop-filter: blur(24px);
+		        backdrop-filter: blur(24px);
+	}
+
+	.Home_description__41Owk div {
+		align-items: flex-end;
+		pointer-events: none;
+		inset: auto 0 0;
+		padding: 2rem;
+		height: 200px;
+		background: linear-gradient(
+			to bottom,
+			transparent 0%,
+			rgb(var(--background-end-rgb)) 40%
+		);
+		z-index: 1;
+	}
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+	.Home_grid__GxQ85 {
+		grid-template-columns: repeat(2, 50%);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.Home_vercelLogo__dtSk9 {
+		filter: invert(1);
+	}
+
+	.Home_logo__27_tb,
+	.Home_thirteen__cMI_k img {
+		filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+	}
+}
+
+@keyframes Home_rotate____XsI {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+.Home_container__bCOhY {
+	background-color: rgb(34, 34, 34);
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	padding: 24px;
+}
+
+@media (prefers-color-scheme: light) {
+	.Home_container__bCOhY {
+		background-color: rgb(255, 255, 255);
+	}
+}
+
+.Home_unol__7H6NR ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.Home_orl__di1Fq li {
+	margin-bottom: 12px;
+}
+
+.Home_metrics__WRLys,
+.Home_stats__e_ULb {
+	margin-top: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Home_stats__e_ULb {
+	justify-content: space-evenly;
+}
+
+.Home_stats__e_ULb img {
+	margin-left: 16px;
+}
+
+.Home_para__BrJXA p {
+	margin-top: 24px;
+}
+
+.Home_stats__e_ULb {
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.Home_stats__e_ULb {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdHlsZXMvSG9tZS5tb2R1bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0MsYUFBYTtDQUNiLHNCQUFzQjtDQUN0Qiw4QkFBOEI7Q0FDOUIsbUJBQW1CO0NBQ25CLGFBQWE7Q0FDYixpQkFBaUI7QUFDbEI7O0FBRUE7Q0FDQyxnQkFBZ0I7Q0FDaEIsd0JBQXdCO0NBQ3hCLG9CQUFvQjtDQUNwQixrQkFBa0I7Q0FDbEIsMkJBQTJCO0NBQzNCLFdBQVc7Q0FDWCxVQUFVO0NBQ1YsNkJBQTZCO0FBQzlCOztBQUVBO0NBQ0MsYUFBYTtDQUNiLHVCQUF1QjtDQUN2QixtQkFBbUI7Q0FDbkIsV0FBVztBQUNaOztBQUVBO0NBQ0Msa0JBQWtCO0NBQ2xCLFNBQVM7Q0FDVCxhQUFhO0NBQ2IsK0NBQStDO0NBQy9DLHNEQUFzRDtDQUN0RCxtQ0FBbUM7QUFDcEM7O0FBRUE7Q0FDQyxnQkFBZ0I7Q0FDaEIsNkJBQTZCO0FBQzlCOztBQUVBO0NBQ0MsYUFBYTtDQUNiLG1EQUFtRDtDQUNuRCx1QkFBdUI7Q0FDdkIsZUFBZTtBQUNoQjs7QUFFQTtDQUNDLG9CQUFvQjtDQUNwQixtQ0FBbUM7Q0FDbkMsb0NBQW9DO0NBQ3BDLGlEQUFpRDtDQUNqRCwwQ0FBMEM7QUFDM0M7O0FBRUE7Q0FDQyxxQkFBcUI7Q0FDckIsMkJBQTJCO0FBQzVCOztBQUVBO0NBQ0MsZ0JBQWdCO0NBQ2hCLHFCQUFxQjtBQUN0Qjs7QUFFQTtDQUNDLFNBQVM7Q0FDVCxZQUFZO0NBQ1osaUJBQWlCO0NBQ2pCLGdCQUFnQjtDQUNoQixlQUFlO0FBQ2hCOztBQUVBO0NBQ0MsYUFBYTtDQUNiLHVCQUF1QjtDQUN2QixtQkFBbUI7Q0FDbkIsa0JBQWtCO0NBQ2xCLGVBQWU7QUFDaEI7O0FBRUE7Q0FDQyxpQ0FBaUM7Q0FDakMsa0JBQWtCO0NBQ2xCLFlBQVk7Q0FDWixhQUFhO0NBQ2IsbUJBQW1CO0FBQ3BCOztBQUVBO0NBQ0MsK0JBQStCO0NBQy9CLFlBQVk7Q0FDWixhQUFhO0NBQ2IsV0FBVztBQUNaOztBQUVBOztDQUVDLFdBQVc7Q0FDWCxTQUFTO0NBQ1Qsa0JBQWtCO0NBQ2xCLGtCQUFrQjtDQUNsQix3QkFBd0I7QUFDekI7O0FBRUE7O0NBRUMsa0JBQWtCO0FBQ25COztBQUVBO0NBQ0MsYUFBYTtDQUNiLHVCQUF1QjtDQUN2QixtQkFBbUI7Q0FDbkIsV0FBVztDQUNYLFlBQVk7Q0FDWixrQkFBa0I7Q0FDbEIsaUJBQWlCO0NBQ2pCLHdCQUF3QjtDQUN4QixtQ0FBbUM7Q0FDbkMsZ0JBQWdCO0NBQ2hCLHNDQUFzQztBQUN2Qzs7QUFFQTs7Q0FFQyxXQUFXO0NBQ1gsa0JBQWtCO0NBQ2xCLFdBQVc7QUFDWjs7QUFFQSw2QkFBNkI7QUFDN0I7Q0FDQyxnREFBb0M7Q0FDcEMsV0FBVztDQUNYLFlBQVk7Q0FDWiw4QkFBOEI7QUFDL0I7O0FBRUEsaUJBQWlCO0FBQ2pCO0NBQ0MsUUFBUTtDQUNSLFlBQVk7Q0FDWixtQ0FBbUM7Q0FDbkM7Ozs7RUFJQztDQUNELDRCQUE0QjtBQUM3Qjs7QUFFQSwyQ0FBMkM7QUFDM0M7Q0FDQztFQUNDLHNDQUFzQztFQUN0QyxvREFBb0Q7Q0FDckQ7O0NBRUE7RUFDQywwQkFBMEI7Q0FDM0I7QUFDRDs7QUFFQTtDQUNDO0VBQ0MsZUFBZTtDQUNoQjs7Q0FFQTtFQUNDLGVBQWU7Q0FDaEI7QUFDRDs7QUFFQSxXQUFXO0FBQ1g7Q0FDQztFQUNDLGFBQWE7Q0FDZDs7Q0FFQTtFQUNDLDBCQUEwQjtFQUMxQixvQkFBb0I7RUFDcEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtDQUNuQjs7Q0FFQTtFQUNDLG9CQUFvQjtDQUNyQjs7Q0FFQTtFQUNDLHFCQUFxQjtDQUN0Qjs7Q0FFQTtFQUNDLG9CQUFvQjtDQUNyQjs7Q0FFQTtFQUNDLGVBQWU7RUFDZixhQUFhO0NBQ2Q7O0NBRUE7RUFDQyxpQkFBaUI7Q0FDbEI7O0NBRUE7RUFDQyxhQUFhO0NBQ2Q7O0NBRUE7O0VBRUMsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixlQUFlO0VBQ2YsV0FBVztDQUNaOztDQUVBO0VBQ0MsbUJBQW1CO0VBQ25CLGVBQWU7RUFDZix5QkFBeUI7RUFDekIsZ0JBQWdCO0VBQ2hCLFlBQVk7RUFDWiw4REFBOEQ7RUFDOUQ7Ozs7R0FJQztFQUNELDRCQUE0QjtFQUM1QixtQ0FBMkI7VUFBM0IsMkJBQTJCO0NBQzVCOztDQUVBO0VBQ0MscUJBQXFCO0VBQ3JCLG9CQUFvQjtFQUNwQixlQUFlO0VBQ2YsYUFBYTtFQUNiLGFBQWE7RUFDYjs7OztHQUlDO0VBQ0QsVUFBVTtDQUNYO0FBQ0Q7O0FBRUEsK0JBQStCO0FBQy9CO0NBQ0M7RUFDQyxxQ0FBcUM7Q0FDdEM7QUFDRDs7QUFFQTtDQUNDO0VBQ0MsaUJBQWlCO0NBQ2xCOztDQUVBOztFQUVDLG1EQUFtRDtDQUNwRDtBQUNEOztBQUVBO0NBQ0M7RUFDQyx5QkFBeUI7Q0FDMUI7Q0FDQTtFQUNDLHVCQUF1QjtDQUN4QjtBQUNEOztBQUVBO0NBQ0MsaUNBQWlDO0NBQ2pDLDhDQUE4QztDQUM5QyxrQkFBa0I7Q0FDbEIsYUFBYTtBQUNkOztBQUVBO0NBQ0M7RUFDQyxvQ0FBb0M7Q0FDckM7QUFDRDs7QUFFQTtDQUNDLHFCQUFxQjtDQUNyQixlQUFlO0FBQ2hCOztBQUVBO0NBQ0MsbUJBQW1CO0FBQ3BCOztBQUVBOztDQUVDLGdCQUFnQjtDQUNoQixhQUFhO0NBQ2IsOEJBQThCO0FBQy9COztBQUVBO0NBQ0MsNkJBQTZCO0FBQzlCOztBQUVBO0NBQ0MsaUJBQWlCO0FBQ2xCOztBQUVBO0NBQ0MsZ0JBQWdCO0FBQ2pCOztBQUVBO0NBQ0MsYUFBYTtBQUNkOztBQUVBO0NBQ0M7RUFDQyxzQkFBc0I7RUFDdEIsbUJBQW1CO0NBQ3BCO0FBQ0QiLCJzb3VyY2VzQ29udGVudCI6WyIubWFpbiB7XHJcblx0ZGlzcGxheTogZmxleDtcclxuXHRmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG5cdGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuXHRhbGlnbi1pdGVtczogY2VudGVyO1xyXG5cdHBhZGRpbmc6IDZyZW07XHJcblx0bWluLWhlaWdodDogMTAwdmg7XHJcbn1cclxuXHJcbi5kZXNjcmlwdGlvbiB7XHJcblx0ZGlzcGxheTogaW5oZXJpdDtcclxuXHRqdXN0aWZ5LWNvbnRlbnQ6IGluaGVyaXQ7XHJcblx0YWxpZ24taXRlbXM6IGluaGVyaXQ7XHJcblx0Zm9udC1zaXplOiAwLjg1cmVtO1xyXG5cdG1heC13aWR0aDogdmFyKC0tbWF4LXdpZHRoKTtcclxuXHR3aWR0aDogMTAwJTtcclxuXHR6LWluZGV4OiAyO1xyXG5cdGZvbnQtZmFtaWx5OiB2YXIoLS1mb250LW1vbm8pO1xyXG59XHJcblxyXG4uZGVzY3JpcHRpb24gYSB7XHJcblx0ZGlzcGxheTogZmxleDtcclxuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuXHRhbGlnbi1pdGVtczogY2VudGVyO1xyXG5cdGdhcDogMC41cmVtO1xyXG59XHJcblxyXG4uZGVzY3JpcHRpb24gcCB7XHJcblx0cG9zaXRpb246IHJlbGF0aXZlO1xyXG5cdG1hcmdpbjogMDtcclxuXHRwYWRkaW5nOiAxcmVtO1xyXG5cdGJhY2tncm91bmQtY29sb3I6IHJnYmEodmFyKC0tY2FsbG91dC1yZ2IpLCAwLjUpO1xyXG5cdGJvcmRlcjogMXB4IHNvbGlkIHJnYmEodmFyKC0tY2FsbG91dC1ib3JkZXItcmdiKSwgMC4zKTtcclxuXHRib3JkZXItcmFkaXVzOiB2YXIoLS1ib3JkZXItcmFkaXVzKTtcclxufVxyXG5cclxuLmNvZGUge1xyXG5cdGZvbnQtd2VpZ2h0OiA3MDA7XHJcblx0Zm9udC1mYW1pbHk6IHZhcigtLWZvbnQtbW9ubyk7XHJcbn1cclxuXHJcbi5ncmlkIHtcclxuXHRkaXNwbGF5OiBncmlkO1xyXG5cdGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDQsIG1pbm1heCgyNSUsIGF1dG8pKTtcclxuXHR3aWR0aDogdmFyKC0tbWF4LXdpZHRoKTtcclxuXHRtYXgtd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5jYXJkIHtcclxuXHRwYWRkaW5nOiAxcmVtIDEuMnJlbTtcclxuXHRib3JkZXItcmFkaXVzOiB2YXIoLS1ib3JkZXItcmFkaXVzKTtcclxuXHRiYWNrZ3JvdW5kOiByZ2JhKHZhcigtLWNhcmQtcmdiKSwgMCk7XHJcblx0Ym9yZGVyOiAxcHggc29saWQgcmdiYSh2YXIoLS1jYXJkLWJvcmRlci1yZ2IpLCAwKTtcclxuXHR0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kIDIwMG1zLCBib3JkZXIgMjAwbXM7XHJcbn1cclxuXHJcbi5jYXJkIHNwYW4ge1xyXG5cdGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuXHR0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjAwbXM7XHJcbn1cclxuXHJcbi5jYXJkIGgyIHtcclxuXHRmb250LXdlaWdodDogNjAwO1xyXG5cdG1hcmdpbi1ib3R0b206IDAuN3JlbTtcclxufVxyXG5cclxuLmNhcmQgcCB7XHJcblx0bWFyZ2luOiAwO1xyXG5cdG9wYWNpdHk6IDAuNjtcclxuXHRmb250LXNpemU6IDAuOXJlbTtcclxuXHRsaW5lLWhlaWdodDogMS41O1xyXG5cdG1heC13aWR0aDogMzBjaDtcclxufVxyXG5cclxuLmNlbnRlciB7XHJcblx0ZGlzcGxheTogZmxleDtcclxuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuXHRhbGlnbi1pdGVtczogY2VudGVyO1xyXG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHRwYWRkaW5nOiA0cmVtIDA7XHJcbn1cclxuXHJcbi5jZW50ZXI6OmJlZm9yZSB7XHJcblx0YmFja2dyb3VuZDogdmFyKC0tc2Vjb25kYXJ5LWdsb3cpO1xyXG5cdGJvcmRlci1yYWRpdXM6IDUwJTtcclxuXHR3aWR0aDogNDgwcHg7XHJcblx0aGVpZ2h0OiAzNjBweDtcclxuXHRtYXJnaW4tbGVmdDogLTQwMHB4O1xyXG59XHJcblxyXG4uY2VudGVyOjphZnRlciB7XHJcblx0YmFja2dyb3VuZDogdmFyKC0tcHJpbWFyeS1nbG93KTtcclxuXHR3aWR0aDogMjQwcHg7XHJcblx0aGVpZ2h0OiAxODBweDtcclxuXHR6LWluZGV4OiAtMTtcclxufVxyXG5cclxuLmNlbnRlcjo6YmVmb3JlLFxyXG4uY2VudGVyOjphZnRlciB7XHJcblx0Y29udGVudDogXCJcIjtcclxuXHRsZWZ0OiA1MCU7XHJcblx0cG9zaXRpb246IGFic29sdXRlO1xyXG5cdGZpbHRlcjogYmx1cig0NXB4KTtcclxuXHR0cmFuc2Zvcm06IHRyYW5zbGF0ZVooMCk7XHJcbn1cclxuXHJcbi5sb2dvLFxyXG4udGhpcnRlZW4ge1xyXG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLnRoaXJ0ZWVuIHtcclxuXHRkaXNwbGF5OiBmbGV4O1xyXG5cdGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG5cdGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcblx0d2lkdGg6IDc1cHg7XHJcblx0aGVpZ2h0OiA3NXB4O1xyXG5cdHBhZGRpbmc6IDI1cHggMTBweDtcclxuXHRtYXJnaW4tbGVmdDogMTZweDtcclxuXHR0cmFuc2Zvcm06IHRyYW5zbGF0ZVooMCk7XHJcblx0Ym9yZGVyLXJhZGl1czogdmFyKC0tYm9yZGVyLXJhZGl1cyk7XHJcblx0b3ZlcmZsb3c6IGhpZGRlbjtcclxuXHRib3gtc2hhZG93OiAwcHggMnB4IDhweCAtMXB4ICMwMDAwMDAxYTtcclxufVxyXG5cclxuLnRoaXJ0ZWVuOjpiZWZvcmUsXHJcbi50aGlydGVlbjo6YWZ0ZXIge1xyXG5cdGNvbnRlbnQ6IFwiXCI7XHJcblx0cG9zaXRpb246IGFic29sdXRlO1xyXG5cdHotaW5kZXg6IC0xO1xyXG59XHJcblxyXG4vKiBDb25pYyBHcmFkaWVudCBBbmltYXRpb24gKi9cclxuLnRoaXJ0ZWVuOjpiZWZvcmUge1xyXG5cdGFuaW1hdGlvbjogNnMgcm90YXRlIGxpbmVhciBpbmZpbml0ZTtcclxuXHR3aWR0aDogMjAwJTtcclxuXHRoZWlnaHQ6IDIwMCU7XHJcblx0YmFja2dyb3VuZDogdmFyKC0tdGlsZS1ib3JkZXIpO1xyXG59XHJcblxyXG4vKiBJbm5lciBTcXVhcmUgKi9cclxuLnRoaXJ0ZWVuOjphZnRlciB7XHJcblx0aW5zZXQ6IDA7XHJcblx0cGFkZGluZzogMXB4O1xyXG5cdGJvcmRlci1yYWRpdXM6IHZhcigtLWJvcmRlci1yYWRpdXMpO1xyXG5cdGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudChcclxuXHRcdHRvIGJvdHRvbSByaWdodCxcclxuXHRcdHJnYmEodmFyKC0tdGlsZS1zdGFydC1yZ2IpLCAxKSxcclxuXHRcdHJnYmEodmFyKC0tdGlsZS1lbmQtcmdiKSwgMSlcclxuXHQpO1xyXG5cdGJhY2tncm91bmQtY2xpcDogY29udGVudC1ib3g7XHJcbn1cclxuXHJcbi8qIEVuYWJsZSBob3ZlciBvbmx5IG9uIG5vbi10b3VjaCBkZXZpY2VzICovXHJcbkBtZWRpYSAoaG92ZXI6IGhvdmVyKSBhbmQgKHBvaW50ZXI6IGZpbmUpIHtcclxuXHQuY2FyZDpob3ZlciB7XHJcblx0XHRiYWNrZ3JvdW5kOiByZ2JhKHZhcigtLWNhcmQtcmdiKSwgMC4xKTtcclxuXHRcdGJvcmRlcjogMXB4IHNvbGlkIHJnYmEodmFyKC0tY2FyZC1ib3JkZXItcmdiKSwgMC4xNSk7XHJcblx0fVxyXG5cclxuXHQuY2FyZDpob3ZlciBzcGFuIHtcclxuXHRcdHRyYW5zZm9ybTogdHJhbnNsYXRlWCg0cHgpO1xyXG5cdH1cclxufVxyXG5cclxuQG1lZGlhIChwcmVmZXJzLXJlZHVjZWQtbW90aW9uKSB7XHJcblx0LnRoaXJ0ZWVuOjpiZWZvcmUge1xyXG5cdFx0YW5pbWF0aW9uOiBub25lO1xyXG5cdH1cclxuXHJcblx0LmNhcmQ6aG92ZXIgc3BhbiB7XHJcblx0XHR0cmFuc2Zvcm06IG5vbmU7XHJcblx0fVxyXG59XHJcblxyXG4vKiBNb2JpbGUgKi9cclxuQG1lZGlhIChtYXgtd2lkdGg6IDcwMHB4KSB7XHJcblx0LmNvbnRlbnQge1xyXG5cdFx0cGFkZGluZzogNHJlbTtcclxuXHR9XHJcblxyXG5cdC5ncmlkIHtcclxuXHRcdGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xyXG5cdFx0bWFyZ2luLWJvdHRvbTogMTIwcHg7XHJcblx0XHRtYXgtd2lkdGg6IDMyMHB4O1xyXG5cdFx0dGV4dC1hbGlnbjogY2VudGVyO1xyXG5cdH1cclxuXHJcblx0LmNhcmQge1xyXG5cdFx0cGFkZGluZzogMXJlbSAyLjVyZW07XHJcblx0fVxyXG5cclxuXHQuY2FyZCBoMiB7XHJcblx0XHRtYXJnaW4tYm90dG9tOiAwLjVyZW07XHJcblx0fVxyXG5cclxuXHQuY2VudGVyIHtcclxuXHRcdHBhZGRpbmc6IDhyZW0gMCA2cmVtO1xyXG5cdH1cclxuXHJcblx0LmNlbnRlcjo6YmVmb3JlIHtcclxuXHRcdHRyYW5zZm9ybTogbm9uZTtcclxuXHRcdGhlaWdodDogMzAwcHg7XHJcblx0fVxyXG5cclxuXHQuZGVzY3JpcHRpb24ge1xyXG5cdFx0Zm9udC1zaXplOiAwLjhyZW07XHJcblx0fVxyXG5cclxuXHQuZGVzY3JpcHRpb24gYSB7XHJcblx0XHRwYWRkaW5nOiAxcmVtO1xyXG5cdH1cclxuXHJcblx0LmRlc2NyaXB0aW9uIHAsXHJcblx0LmRlc2NyaXB0aW9uIGRpdiB7XHJcblx0XHRkaXNwbGF5OiBmbGV4O1xyXG5cdFx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcblx0XHRwb3NpdGlvbjogZml4ZWQ7XHJcblx0XHR3aWR0aDogMTAwJTtcclxuXHR9XHJcblxyXG5cdC5kZXNjcmlwdGlvbiBwIHtcclxuXHRcdGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcblx0XHRpbnNldDogMCAwIGF1dG87XHJcblx0XHRwYWRkaW5nOiAycmVtIDFyZW0gMS40cmVtO1xyXG5cdFx0Ym9yZGVyLXJhZGl1czogMDtcclxuXHRcdGJvcmRlcjogbm9uZTtcclxuXHRcdGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKHZhcigtLWNhbGxvdXQtYm9yZGVyLXJnYiksIDAuMjUpO1xyXG5cdFx0YmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KFxyXG5cdFx0XHR0byBib3R0b20sXHJcblx0XHRcdHJnYmEodmFyKC0tYmFja2dyb3VuZC1zdGFydC1yZ2IpLCAxKSxcclxuXHRcdFx0cmdiYSh2YXIoLS1jYWxsb3V0LXJnYiksIDAuNSlcclxuXHRcdCk7XHJcblx0XHRiYWNrZ3JvdW5kLWNsaXA6IHBhZGRpbmctYm94O1xyXG5cdFx0YmFja2Ryb3AtZmlsdGVyOiBibHVyKDI0cHgpO1xyXG5cdH1cclxuXHJcblx0LmRlc2NyaXB0aW9uIGRpdiB7XHJcblx0XHRhbGlnbi1pdGVtczogZmxleC1lbmQ7XHJcblx0XHRwb2ludGVyLWV2ZW50czogbm9uZTtcclxuXHRcdGluc2V0OiBhdXRvIDAgMDtcclxuXHRcdHBhZGRpbmc6IDJyZW07XHJcblx0XHRoZWlnaHQ6IDIwMHB4O1xyXG5cdFx0YmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KFxyXG5cdFx0XHR0byBib3R0b20sXHJcblx0XHRcdHRyYW5zcGFyZW50IDAlLFxyXG5cdFx0XHRyZ2IodmFyKC0tYmFja2dyb3VuZC1lbmQtcmdiKSkgNDAlXHJcblx0XHQpO1xyXG5cdFx0ei1pbmRleDogMTtcclxuXHR9XHJcbn1cclxuXHJcbi8qIFRhYmxldCBhbmQgU21hbGxlciBEZXNrdG9wICovXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3MDFweCkgYW5kIChtYXgtd2lkdGg6IDExMjBweCkge1xyXG5cdC5ncmlkIHtcclxuXHRcdGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDIsIDUwJSk7XHJcblx0fVxyXG59XHJcblxyXG5AbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBkYXJrKSB7XHJcblx0LnZlcmNlbExvZ28ge1xyXG5cdFx0ZmlsdGVyOiBpbnZlcnQoMSk7XHJcblx0fVxyXG5cclxuXHQubG9nbyxcclxuXHQudGhpcnRlZW4gaW1nIHtcclxuXHRcdGZpbHRlcjogaW52ZXJ0KDEpIGRyb3Atc2hhZG93KDAgMCAwLjNyZW0gI2ZmZmZmZjcwKTtcclxuXHR9XHJcbn1cclxuXHJcbkBrZXlmcmFtZXMgcm90YXRlIHtcclxuXHRmcm9tIHtcclxuXHRcdHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XHJcblx0fVxyXG5cdHRvIHtcclxuXHRcdHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xyXG5cdH1cclxufVxyXG5cclxuLmNvbnRhaW5lciB7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogcmdiKDM0LCAzNCwgMzQpO1xyXG5cdGJveC1zaGFkb3c6IDBweCAwcHggOHB4IDBweCByZ2JhKDAsIDAsIDAsIDAuMik7XHJcblx0Ym9yZGVyLXJhZGl1czogOHB4O1xyXG5cdHBhZGRpbmc6IDI0cHg7XHJcbn1cclxuXHJcbkBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGxpZ2h0KSB7XHJcblx0LmNvbnRhaW5lciB7XHJcblx0XHRiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XHJcblx0fVxyXG59XHJcblxyXG4udW5vbCB1bCB7XHJcblx0bGlzdC1zdHlsZS10eXBlOiBub25lO1xyXG5cdHBhZGRpbmctbGVmdDogMDtcclxufVxyXG5cclxuLm9ybCBsaSB7XHJcblx0bWFyZ2luLWJvdHRvbTogMTJweDtcclxufVxyXG5cclxuLm1ldHJpY3MsXHJcbi5zdGF0cyB7XHJcblx0bWFyZ2luLXRvcDogMzJweDtcclxuXHRkaXNwbGF5OiBmbGV4O1xyXG5cdGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxufVxyXG5cclxuLnN0YXRzIHtcclxuXHRqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcclxufVxyXG5cclxuLnN0YXRzIGltZyB7XHJcblx0bWFyZ2luLWxlZnQ6IDE2cHg7XHJcbn1cclxuXHJcbi5wYXJhIHAge1xyXG5cdG1hcmdpbi10b3A6IDI0cHg7XHJcbn1cclxuXHJcbi5zdGF0cyB7XHJcblx0bWFyZ2luLXRvcDogMDtcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xyXG5cdC5zdGF0cyB7XHJcblx0XHRmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG5cdFx0YWxpZ24taXRlbXM6IGNlbnRlcjtcclxuXHR9XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><noscript id="__next_css__DO_NOT_USE__"></noscript><style type="text/css" id="operaUserStyle">
     video {
       filter: -opera-shader(url(data:text/plain;base64,dW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmhhbGYzIHBpeGVsKGNvbnN0IGludCB4LCBjb25zdCBpbnQgeSwgaW4gaGFsZjIgeHkpCnsKCXJldHVybiBpQ2h1bmsuZXZhbCh4eSArIGhhbGYyKHgsIHkpKS5yZ2I7Cn0gIAoKaGFsZjMgUkdYKGhhbGYyIHh5KXsKCWhhbGYzIGYgPQoJcGl4ZWwoLTEsLTEsIHh5KSAqICAxLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwtMSwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDEsLTEsIHh5KSAqICAxLiArCgkKCXBpeGVsKC0xLCAwLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwgMCwgeHkpICogLTIuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLCAwLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJCglwaXhlbCgtMSwgMSwgeHkpICogIDEuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAwLCAxLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDEsIDEsIHh5KSAqICAxLgoJOwoJcmV0dXJuIGYgLyAtMjsKfQoKaGFsZjMgUkdYTW9yZShoYWxmMiB4eSl7CgloYWxmMyBmID0KCXBpeGVsKC0xLC0xLCB4eSkgKiAgMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDAsLTEsIHh5KSAqIC0xLiArICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLC0xLCB4eSkgKiAgMS4gKwoJCglwaXhlbCgtMSwgMCwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDAsIDAsIHh5KSAqIC0xLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMSwgMCwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgICAKCQoJcGl4ZWwoLTEsIDEsIHh5KSAqICAxLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwgMSwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLCAxLCB4eSkgKiAgMS4gCgk7CglyZXR1cm4gZiAvIC0xOwp9CgoKaGFsZjQgbWFpbihmbG9hdDIgeHkpCnsKCWhhbGY0IGNvbG9yID0gaUNodW5rLmV2YWwoeHkpOwoJCglpZiAoY29sb3IuYSA8IDEpIHsKCQlyZXR1cm4gY29sb3I7Cgl9CgkKCWlmIChpQ2h1bmtTaXplLnggKiBpQ2h1bmtTaXplLnkgPCBNSU5fQVJFQSkgewoJCXJldHVybiBjb2xvcjsKCX0KCglpZiAoaUNodW5rU2l6ZS55IDwgTUlOX1NUUklQIHx8IGlDaHVua1NpemUueCA8IE1JTl9TVFJJUCkgewoJCXJldHVybiBjb2xvcjsKCX0KCglpZiAoeHkueCA8IE1BUkdJTiB8fCB4eS54ID4gKGlDaHVua1NpemUueCAtIE1BUkdJTikgfHwKCSAgICB4eS55IDwgTUFSR0lOIHx8IHh5LnkgPiAoaUNodW5rU2l6ZS55IC0gTUFSR0lOKSkgewogICAgCXJldHVybiBjb2xvcjsgICAgCiAgICB9CgkKCWlmIChpQ2h1bmtTaXplLnggKiBpQ2h1bmtTaXplLnkgPiBUSFJFU0hPTERfQVJFQSkgewoJCWNvbG9yID0gaGFsZjQoUkdYTW9yZSh4eSksIDEpOwoJfSBlbHNlIHsKCQljb2xvciA9IGhhbGY0KFJHWCh4eSksIDEpOwoJfQoKCXJldHVybiBjb2xvcjsKfQo=));
     }
-  </style><style type="text/css">:root zeus-ad, :root topadblock, :root span[id^="ezoic-pub-ad-placeholder-"], :root guj-ad, :root gpt-ad, :root div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"], :root div[id^="zergnet-widget"], :root div[id^="yandex_ad"], :root div[id^="vuukle-ad-"], :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="div-gpt-"], :root div[id^="dfp-ad-"], :root div[id^="advads_ad_"], :root div[id^="adspot-"], :root div[id^="ads300_250-widget-"], :root div[id^="ads300_100-widget-"], :root div[id^="ads250_250-widget-"], :root div[id^="adrotate_widgets-"], :root div[id^="adngin-"], :root div[id^="_vdo_ads_player_ai_"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-native_ad], :root div[data-mini-ad-unit], :root div[data-insertion], :root div[data-id-advertdfpconf], :root div[data-google-query-id], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-content="Advertisement"], :root div[data-alias="300x250 Ad 2"], :root div[data-alias="300x250 Ad 1"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-ad-wrapper], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[class^="Adstyled__AdWrapper-"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root aside[id^="adrotate_widgets-"], :root article.ad, :root ark-top-ad, :root app-advertisement, :root app-ad, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root ad-shield-ads, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root citrus-ad-wrapper, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://yogacomplyfuel.com/"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://t.grtyi.com/"], :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root div[class^="Display_displayAd"], :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://www.bang.com/?aff="], :root a[href^="https://www.adxsrve.com/"], :root [data-template-type="nativead"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://webroutetrk.com/"], :root a[href^="https://twinrdsyn.com/"], :root a[href^="https://tsartech.g2afse.com/"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="https://torguard.net/aff.php"] > img, :root div[data-adname], :root a[href^="https://thechleads.pro/"], :root [data-role="tile-ads-module"], :root a[href^="https://adsrv4k.com/"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://thaudray.com/"], :root a[href^="https://www.5mno3.com/"], :root a[href^="https://taghaugh.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root a[href^="https://streamate.com/landing/click/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://refpa4903566.top/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root [href^="https://r.kraken.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root div[id^="ad_position_"], :root a[href^="https://ovb.im/"], :root div[id^="ad-div-"], :root a[href^="https://newbinotracs.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root [href^="https://stvkr.com/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://loboclick.com"], :root [href^="https://routewebtk.com/"], :root a[href^="https://see.kmisln.com/"], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://refpa.top/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root [data-revive-zoneid], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="https://clk.wrenchsound.store/"], :root a[href^="https://go.zybrdr.com"], :root [href^="http://join.michelle-austin.com/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root a[href^="https://ismlks.com/"], :root a[href^="//a.bestcontentfare.top/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://azpresearch.club/"], :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root .card-captioned.crd > .crd--cnt > .s2nPlayer, :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://go.ebrokerserve.com/"], :root a[href^="https://go.dmzjmp.com"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://go.admjmp.com/"], :root [href^="https://kingered-banctours.com/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a-ad, :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="https://geniusdexchange.com/"], :root a[href^="https://frameworkdeserve.com/"], :root a[href^="https://flirtandsweets.life/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://financeads.net/tc.php?"], :root bottomadblock, :root a[href^="https://fertilitycommand.com/"], :root [data-freestar-ad], :root a[href^="https://fc.lc/ref/"], :root div[data-native-ad], :root a[href^="https://engine.trackingdesks.com/"], :root [href^="https://totlnkcl.com/"], :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://www.reimageplus.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://wantopticalfreelance.com/"], :root a[href^="https://dl-protect.net/"], :root a[href^="https://datingoffers30.info/"], :root a[href^="https://clixtrac.com/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://click.linksynergy.com/fs-bin/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="https://claring-loccelkin.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://bluedelivery.pro/"], :root #topstuff > #tads, :root a[href^="https://black77854.com/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://batheunits.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="https://m.do.co/c/"] > img, :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://ads.ad4game.com/"], :root [id^="google_ads_iframe"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://affpa.top/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://adjoincomprise.com/"], :root [href^="http://misslinkvocation.com/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://misspkl.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://ad.kubiccomps.icu/"], :root a[href^="https://adswick.com/"], :root a[href^="https://a.bestcontentoperation.top/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root [href="https://ourgoldguy.com/contact/"] img, :root a[href^="https://brightadnetwork.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href^="https://awentw.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="https://agacelebir.com/"], :root a[href^="https://spygasm.com/track?"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="http://trk.globwo.online/"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://tour.mrskin.com/"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[href^="https://funkydaters.com/"], :root [id^="ad_sky"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root div[id^="google_dfp_"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root .rc-cta[data-target], :root [href^="http://go.cm-trk2.com/"], :root a[href^="http://click.payserve.com/"], :root a[href^="https://porngames.adult/?SID="], :root a[href^="https://landing1.brazzersnetwork.com"], :root #slashboxes > .deals-rail, :root [href^="http://globsads.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="http://bc.vc/?r="], :root a[href^="https://mityneedn.com/"], :root [href^="http://homemoviestube.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="https://a2.adform.net/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href^="https://a.adtng.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root [data-dynamic-ads], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root [data-ad-width], :root [href^="https://join.playboyplus.com/track/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="https://axdsz.pro/"], :root a[href^="http://bodelen.com/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root [href^="https://cpa.10kfreesilver.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root a[href^="https://reinstandpointdumbest.com/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://wct.link/"], :root [href^="https://goldforyourfuture.com/clk.trk"] img, :root [href^="https://infinitytrk.com/"], :root [onclick^="location.href='http://www.reimageplus.com"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root [id^="section-ad-banner"], :root .commercial-unit-mobile-top > div[data-pla="1"], :root a[href^="https://go.julrdr.com/"], :root .trc_rbox_div .syndicatedItemUB, :root [href^="https://zone.gotrackier.com/"], :root [href^="https://www.targetingpartner.com/"], :root [href^="https://detachedbates.com/"], :root a[href^="https://fourwhenstatistics.com/"], :root [href^="https://www.restoro.com/"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://staRTgaming.net/tienda/"], :root a[href^="https://STaRtgAmInG.net/tienda/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root div[id^="ad-position-"], :root a[href^="http://adultfriendfinder.com/go/page/landing"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://leg.xyz/?track="], :root div[id^="crt-"][style], :root a[href^="http://adultgames.xxx/"], :root a[href^="https://traffic.bannerator.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href^="https://losingoldfry.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root a[href^="https://oackoubs.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://go.goasrv.com/"], :root .commercial-unit-mobile-top > .v7hl4d, :root [href^="http://mypillow.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href^="https://fleshlight.sjv.io/"], :root [data-ad-manager-id], :root a[href^="https://promo-bc.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://go.hpyjmp.com"], :root ADS-RIGHT, :root [href^="https://mystore.com/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root [href^="https://mylead.global/stl/"] > img, :root #leader-companion > a[href], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root .vid-present > .van_vid_carousel__padding, :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root [href^="https://www.hostg.xyz/"] > img, :root .section-subheader > .section-hotel-prices-header, :root [href^="https://go.affiliatexe.com/"], :root [href^="https://go.4rabettraff.com/"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href^="https://glersakr.com/"], :root ins.adsbygoogle, :root a[href^="https://1startfiledownload1.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.onclickmega.com/jump/next.php?"], :root a[href^="http://adf.ly/?id="], :root a[href^="https://wittered-mainging.com/"], :root [href^="https://engine.gettopple.com/"], :root a[href^="https://go.gldrdr.com/"], :root [data-id^="div-gpt-ad"], :root [href^="https://awbbjmp.com/"], :root a[href^="https://k2s.cc/pr/"], :root [href^="https://affect3dnetwork.com/track/"], :root a[href^="https://camfapr.com/landing/click/"], :root [href="//sexcams.plus/"], :root a[href^="https://go.currency.com/"], :root [href^="http://www.mypillow.com/"] > img, :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root [href^="https://join3.bannedsextapes.com"], :root div[data-spotim-slot], :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href^="https://go.247traffic.com/"], :root [href^="https://join.girlsoutwest.com/"], :root [href^="http://trafficare.net/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://adserver.adreactor.com/"], :root [href^="http://join.shemalesfromhell.com/"], :root [id^="ad_slider"], :root #searchResultsList > div > div[onclick$="'inline.ad'});"], :root [data-adbridg-ad-class], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root [href^="http://join.shemale.xxx/"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [href^="http://www.fleshlightgirls.com/"], :root [href^="http://join.trannies-fuck.com/"], :root .trc_rbox .syndicatedItem, :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://cpmspace.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root a[href^="https://thefacux.com/"], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root [href^="http://join.rodneymoore.com/"], :root a[href*=".trust.zone"], :root [href^="https://shrugartisticelder.com"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://staRTgamIng.net/tienda/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root [name^="google_ads_iframe"], :root a[href^="https://go.xxxjmp.com"], :root [data-desktop-ad-id], :root [href^="https://wct.link/"], :root div[recirculation-ad-container], :root [href^="https://traffserve.com/"], :root #kt_player > a[target="_blank"], :root [href="https://www.masstortfinancing.com/"] > img, :root .ob_container .item-container-obpd, :root [id^="div-gpt-ad"], :root [href^="https://mypillow.com/"] > img, :root [href^="https://ad.admitad.com/"], :root a[href^="https://u.expresstech.io/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://lnkxt.bannerator.com/"], :root [href="https://jdrucker.com/gold"] > img, :root [href^="https://v.investologic.co.uk/"], :root [href^="https://cipledecline.buzz/"], :root a[href^="https://track.ultravpn.com/"], :root [href^="https://goldcometals.com/clk.trk"], :root [href^="https://fancentro.com/"], :root [data-mobile-ad-id], :root a[href^="https://trk.sportsflix4k.club/"], :root a[href^="https://go.xlivrdr.com"], :root [onclick*="content.ad/"], :root AMP-AD, :root [data-ad-cls], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root [id^="ad-wrap-"], :root div[id^="taboola-stream-"], :root [href^="https://go.astutelinks.com/"], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="http://affiliates.thrixxx.com/"], :root [class^="amp-ad-"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root a[href^="http://go.xtbaffiliates.com/"], :root [href^="https://click2cvs.com/"], :root a[href^="https://www.liquidfire.mobi/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root AD-SLOT, :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root .trc_related_container div[data-item-syndicated="true"], :root [href^="http://join.shemalepornstar.com/"], :root a[href^="https://go.xlviiirdr.com"], :root .trc_rbox_div .syndicatedItem, :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root a[href^="https://iactrivago.ampxdirect.com/"], :root a[href^="https://a.medfoodhome.com/"], :root [data-ad-module], :root a[href^="https://go.cmtaffiliates.com/"], :root [data-name="adaptiveConstructorAd"], :root [href^="https://optimizedelite.com/"] > img, :root [href^="https://trackfin.asia/"], :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href*="//lkstrck2.com/"], :root .plistaList > .itemLinkPET, :root a[href^="https://startgAming.net/tienda/"], :root [href^="https://safer-redirection.com"], :root atf-ad-slot, :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root a[href^="http://partners.etoro.com/"], :root [data-advadstrackid], :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root a[href^="https://traffdaq.com/"], :root [class^="div-gpt-ad"], :root a[href^="https://bs.serving-sys.com"], :root [href^="http://residenceseeingstanding.com/"], :root [href^="https://www.cloudways.com/en/?id"], :root a[href^="https://refpazkjixes.top/"], :root #mgb-container > #mgb, :root a[href^="https://join.virtuallust3d.com/"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root [data-adblockkey], :root [data-ez-name] { display: none !important; }</style></head><body><div id="__next"><div class="Home_container__bCOhY container-lg px-3 my-5 markdown-body"><header id="myHeader" style="transition: all 0.5s ease-in-out 0s; transform: rotateX(360deg);"><h1><a href="https://quinc.nekonyan.fun/">quincynyan</a></h1></header><ul class="unol"><li class="orl"><img alt="👋" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f44b.svg"> Hi there, I’m QuincyNyan!</li><li class="orl"><img alt="👀" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f440.svg"> I’m interested in all things kawaii and fun</li><li class="orl"><img alt="🌱" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f331.svg"> I’m currently learning new coding tricks and techniques</li><li class="orl"><img alt="💞️" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f49e.svg"> I’m looking to collaborate on cute projects (and maybe dates too<!-- --> <img alt="🥺" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f97a.svg"><img alt="💜" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f49c.svg">)</li><li class="orl"><img alt="📫" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f4eb.svg"> You can reach me at <span style="position:relative;display:inline-block"><span><span class="discord-tag" aria-expanded="false" role="button">@quincynyan#6822</span></span></span> <!-- -->on Discord</li></ul><p class="para">I'm just an ordinary gamer living in a cute little house on a cute little street in a cute little town in a cute little city in a cute little state in a cute little country on a cute little continent on a cute little planet in a cute little Solar System in a cute little galaxy in a cute little universe, playing an ordinary game called Minecraft.</p><div class="para"><div class="Home_metrics__WRLys"><img alt="Metrics (Reload if you see this)" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" style="color:transparent;width:auto;height:auto" src="./QuincyNyan_files/quincynyan.svg"></div></div><div class="para"><div class="Home_stats__e_ULb"><img alt="QuincyNyan&#39;s GitHub stats" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" style="color:transparent;width:auto;height:auto" src="./QuincyNyan_files/api.svg"><img alt="Top Langs" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" style="color:transparent;width:auto;height:auto" src="./QuincyNyan_files/saved_resource.svg"></div></div><p class="para">I mainly code in JavaScript, but I'm currently learning Python too! My first language was Java, and I'm looking forward to learning C++ in the future. Feel free to reach out to me and collaborate. DMs are always open, but don't expect me to be a coding expert. Even though I've been coding for the past 3 years, I still consider myself a beginner, and I may need your help more than you need mine! XD</p><p class="para">All of my repos are free to use. You can copy them, duplicate them, do whatever you want with them! If you need any help with my messy, dirty spaghetti code, just let me know! I'm always happy to help (not because I'm angry you're using my code without my permission, I really don't mind!). Welp, have a super cute day! 😊🌸🌟</p></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"qbz_G-BWx5wjg3w8Yv7o1","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script><next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;"></p></next-route-announcer></body></html>
+  </style><style type="text/css">:root zeus-ad, :root topadblock, :root span[id^="ezoic-pub-ad-placeholder-"], :root guj-ad, :root gpt-ad, :root div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"], :root div[id^="zergnet-widget"], :root div[id^="yandex_ad"], :root div[id^="vuukle-ad-"], :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="div-gpt-"], :root div[id^="dfp-ad-"], :root div[id^="advads_ad_"], :root div[id^="adspot-"], :root div[id^="ads300_250-widget-"], :root div[id^="ads300_100-widget-"], :root div[id^="ads250_250-widget-"], :root div[id^="adrotate_widgets-"], :root div[id^="adngin-"], :root div[id^="_vdo_ads_player_ai_"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-native_ad], :root div[data-mini-ad-unit], :root div[data-insertion], :root div[data-id-advertdfpconf], :root div[data-google-query-id], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-content="Advertisement"], :root div[data-alias="300x250 Ad 2"], :root div[data-alias="300x250 Ad 1"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-ad-wrapper], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[class^="Adstyled__AdWrapper-"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root aside[id^="adrotate_widgets-"], :root article.ad, :root ark-top-ad, :root app-advertisement, :root app-ad, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root ad-shield-ads, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root citrus-ad-wrapper, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://yogacomplyfuel.com/"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root div[class^="Display_displayAd"], :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://www.bang.com/?aff="], :root [data-template-type="nativead"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://webroutetrk.com/"], :root a[href^="https://twinrdsyn.com/"], :root a[href^="https://tsartech.g2afse.com/"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="https://torguard.net/aff.php"] > img, :root div[data-adname], :root a[href^="https://thechleads.pro/"], :root [data-role="tile-ads-module"], :root a[href^="https://adsrv4k.com/"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://thaudray.com/"], :root a[href^="https://www.5mno3.com/"], :root a[href^="https://taghaugh.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root a[href^="https://streamate.com/landing/click/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://refpa4903566.top/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root [href^="https://r.kraken.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root div[id^="ad_position_"], :root a[href^="https://ovb.im/"], :root div[id^="ad-div-"], :root a[href^="https://newbinotracs.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root [href^="https://stvkr.com/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://loboclick.com"], :root [href^="https://routewebtk.com/"], :root a[href^="https://see.kmisln.com/"], :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://refpa.top/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root [data-revive-zoneid], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="https://clk.wrenchsound.store/"], :root a[href^="https://go.zybrdr.com"], :root [href^="http://join.michelle-austin.com/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root a[href^="https://ismlks.com/"], :root a[href^="//a.bestcontentfare.top/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://azpresearch.club/"], :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root .card-captioned.crd > .crd--cnt > .s2nPlayer, :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://go.ebrokerserve.com/"], :root a[href^="https://go.dmzjmp.com"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://go.admjmp.com/"], :root [href^="https://kingered-banctours.com/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a-ad, :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="https://geniusdexchange.com/"], :root a[href^="https://frameworkdeserve.com/"], :root a[href^="https://flirtandsweets.life/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://s.optzsrv.com/"], :root bottomadblock, :root a[href^="https://fertilitycommand.com/"], :root [data-freestar-ad], :root a[href^="https://fc.lc/ref/"], :root div[data-native-ad], :root a[href^="https://engine.trackingdesks.com/"], :root [href^="https://totlnkcl.com/"], :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://www.reimageplus.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root div[id^="optidigital-adslot"], :root a[href^="https://wantopticalfreelance.com/"], :root a[href^="https://dl-protect.net/"], :root a[href^="https://datingoffers30.info/"], :root a[href^="https://clixtrac.com/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://click.linksynergy.com/fs-bin/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="https://claring-loccelkin.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="https://affcpatrk.com/"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://bluedelivery.pro/"], :root #topstuff > #tads, :root a[href^="https://black77854.com/"], :root a[href^="https://bc.game/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://batheunits.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="//whulsaux.com/"], :root a[href^="https://m.do.co/c/"] > img, :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://www.adxsrve.com/"], :root a[href^="https://convertmb.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://ads.ad4game.com/"], :root [id^="google_ads_iframe"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://affpa.top/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://adjoincomprise.com/"], :root [href^="http://misslinkvocation.com/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://misspkl.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://ad.kubiccomps.icu/"], :root a[href^="https://adswick.com/"], :root a[href^="https://a2.adform.net/"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://a.bestcontentoperation.top/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root [href="https://ourgoldguy.com/contact/"] img, :root a[href^="https://brightadnetwork.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="https://agacelebir.com/"], :root a[href^="https://spygasm.com/track?"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="http://trk.globwo.online/"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://tour.mrskin.com/"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[href^="https://funkydaters.com/"], :root [id^="ad_sky"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root div[id^="google_dfp_"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root .rc-cta[data-target], :root [href^="http://go.cm-trk2.com/"], :root a[href^="http://click.payserve.com/"], :root a[href^="https://porngames.adult/?SID="], :root a[href^="https://landing1.brazzersnetwork.com"], :root #slashboxes > .deals-rail, :root [href^="http://globsads.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="http://bc.vc/?r="], :root a[href^="https://mityneedn.com/"], :root [href^="http://homemoviestube.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="//zunsoach.com/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href^="https://a.adtng.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root a[href^="//go.eabids.com/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root [data-dynamic-ads], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root [data-ad-width], :root [href^="https://join.playboyplus.com/track/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="https://axdsz.pro/"], :root a[href^="http://bodelen.com/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root [href^="https://cpa.10kfreesilver.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root a[href^="https://reinstandpointdumbest.com/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://wct.link/"], :root [href^="https://goldforyourfuture.com/clk.trk"] img, :root [href^="https://infinitytrk.com/"], :root [onclick^="location.href='http://www.reimageplus.com"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root [id^="section-ad-banner"], :root .commercial-unit-mobile-top > div[data-pla="1"], :root a[href^="https://go.julrdr.com/"], :root .trc_rbox_div .syndicatedItemUB, :root [href^="https://zone.gotrackier.com/"], :root [href^="https://www.targetingpartner.com/"], :root [href^="https://detachedbates.com/"], :root a[href^="https://fourwhenstatistics.com/"], :root [href^="https://www.restoro.com/"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://staRTgaming.net/tienda/"], :root a[href^="https://STaRtgAmInG.net/tienda/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root div[id^="ad-position-"], :root a[href^="http://adultfriendfinder.com/go/page/landing"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://leg.xyz/?track="], :root div[id^="crt-"][style], :root a[href^="http://adultgames.xxx/"], :root a[href^="https://traffic.bannerator.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href^="https://losingoldfry.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root a[href^="https://oackoubs.com/"], :root a[href^="https://ak.psaltauw.net/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://go.goasrv.com/"], :root .commercial-unit-mobile-top > .v7hl4d, :root [href^="http://mypillow.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href^="https://fleshlight.sjv.io/"], :root [data-ad-manager-id], :root a[href^="https://promo-bc.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://go.hpyjmp.com"], :root ADS-RIGHT, :root [href^="https://mystore.com/"] > img, :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://t.grtyi.com/"], :root [href^="https://mypatriotsupply.com/"] > img, :root [href^="https://mylead.global/stl/"] > img, :root #leader-companion > a[href], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root .vid-present > .van_vid_carousel__padding, :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root [href^="https://www.hostg.xyz/"] > img, :root .section-subheader > .section-hotel-prices-header, :root [href^="https://go.affiliatexe.com/"], :root [href^="https://go.4rabettraff.com/"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href^="https://glersakr.com/"], :root ins.adsbygoogle, :root a[href^="https://1startfiledownload1.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.onclickmega.com/jump/next.php?"], :root a[href^="http://adf.ly/?id="], :root a[href^="https://wittered-mainging.com/"], :root [href^="https://engine.gettopple.com/"], :root a[href^="https://go.gldrdr.com/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://tracker.loropartners.com/"], :root [href^="https://awbbjmp.com/"], :root a[href^="https://k2s.cc/pr/"], :root [href^="https://affect3dnetwork.com/track/"], :root a[href^="https://camfapr.com/landing/click/"], :root [href="//sexcams.plus/"], :root a[href^="https://go.currency.com/"], :root [href^="http://www.mypillow.com/"] > img, :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root [href^="https://join3.bannedsextapes.com"], :root div[data-spotim-slot], :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href^="https://go.247traffic.com/"], :root [href^="https://join.girlsoutwest.com/"], :root [href^="http://trafficare.net/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://adserver.adreactor.com/"], :root [href^="http://join.shemalesfromhell.com/"], :root [id^="ad_slider"], :root #searchResultsList > div > div[onclick$="'inline.ad'});"], :root [data-adbridg-ad-class], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root [href^="http://join.shemale.xxx/"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [href^="http://www.fleshlightgirls.com/"], :root [href^="http://join.trannies-fuck.com/"], :root .trc_rbox .syndicatedItem, :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://cpmspace.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root a[href^="https://thefacux.com/"], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root [href^="http://join.rodneymoore.com/"], :root a[href*=".trust.zone"], :root [href^="https://shrugartisticelder.com"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://staRTgamIng.net/tienda/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root [name^="google_ads_iframe"], :root a[href^="https://go.xxxjmp.com"], :root [data-desktop-ad-id], :root [href^="https://wct.link/"], :root div[recirculation-ad-container], :root [href^="https://traffserve.com/"], :root #kt_player > a[target="_blank"], :root [href="https://www.masstortfinancing.com/"] > img, :root .ob_container .item-container-obpd, :root [id^="div-gpt-ad"], :root [href^="https://mypillow.com/"] > img, :root [href^="https://ad.admitad.com/"], :root a[href^="https://u.expresstech.io/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://lnkxt.bannerator.com/"], :root [href="https://jdrucker.com/gold"] > img, :root [href^="https://v.investologic.co.uk/"], :root [href^="https://cipledecline.buzz/"], :root a[href^="https://track.ultravpn.com/"], :root [href^="https://goldcometals.com/clk.trk"], :root [data-mobile-ad-id], :root a[href^="https://trk.sportsflix4k.club/"], :root a[href^="https://go.xlivrdr.com"], :root [onclick*="content.ad/"], :root AMP-AD, :root [data-ad-cls], :root [id^="ad-wrap-"], :root div[id^="taboola-stream-"], :root [href^="https://go.astutelinks.com/"], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="http://affiliates.thrixxx.com/"], :root [class^="amp-ad-"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root a[href^="http://go.xtbaffiliates.com/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root AD-SLOT, :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root [href^="https://click2cvs.com/"], :root .trc_related_container div[data-item-syndicated="true"], :root [href^="http://join.shemalepornstar.com/"], :root a[href^="https://go.xlviiirdr.com"], :root .trc_rbox_div .syndicatedItem, :root a[href^="https://bs.serving-sys.com"], :root [href^="http://residenceseeingstanding.com/"], :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root [data-ad-module], :root a[href^="https://go.cmtaffiliates.com/"], :root [data-name="adaptiveConstructorAd"], :root [href^="https://optimizedelite.com/"] > img, :root [href^="https://trackfin.asia/"], :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href*="//lkstrck2.com/"], :root .plistaList > .itemLinkPET, :root a[href^="https://startgAming.net/tienda/"], :root [href^="https://safer-redirection.com"], :root atf-ad-slot, :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root a[href^="http://partners.etoro.com/"], :root [data-advadstrackid], :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root a[href^="https://traffdaq.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="https://awentw.com/"], :root [class^="div-gpt-ad"], :root [href^="https://www.cloudways.com/en/?id"], :root a[href^="https://refpazkjixes.top/"], :root #mgb-container > #mgb, :root a[href^="https://join.virtuallust3d.com/"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root [data-adblockkey], :root [data-ez-name] { display: none !important; }</style></head><body><div id="__next"><div class="Home_container__bCOhY container-lg px-3 my-5 markdown-body"><header id="myHeader" style="transition: all 0.5s ease-in-out 0s;"><h1><a href="https://quinc.nekonyan.fun/">quincynyan</a></h1></header><ul class="unol"><li class="orl"><img alt="👋" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f44b.svg"> Hi there, I’m QuincyNyan!</li><li class="orl"><img alt="👀" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f440.svg"> I’m interested in all things kawaii and fun</li><li class="orl"><img alt="🌱" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f331.svg"> I’m currently learning new coding tricks and techniques</li><li class="orl"><img alt="💞️" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f49e.svg"> I’m looking to collaborate on cute projects (and maybe dates too<!-- --> <img alt="🥺" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f97a.svg"><img alt="💜" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f49c.svg">)</li><li class="orl"><img alt="📫" draggable="false" loading="lazy" width="72" height="72" decoding="async" data-nimg="1" class="emoji" style="color:transparent" src="./QuincyNyan_files/1f4eb.svg"> You can reach me at <span style="position:relative;display:inline-block"><span><span class="discord-tag" aria-expanded="false" role="button">@quincynyan#6822</span></span></span> <!-- -->on Discord</li></ul><p class="para">I'm just an ordinary gamer living in a cute little house on a cute little street in a cute little town in a cute little city in a cute little state in a cute little country on a cute little continent on a cute little planet in a cute little Solar System in a cute little galaxy in a cute little universe, playing an ordinary game called Minecraft.</p><div class="para"><div class="Home_metrics__WRLys"><img alt="Metrics (Reload if you see this)" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" style="color:transparent;width:auto;height:auto" src="./QuincyNyan_files/quincynyan.svg"></div></div><div class="para"><div class="Home_stats__e_ULb"><img alt="QuincyNyan&#39;s GitHub stats" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" style="color:transparent;width:auto;height:auto" src="./QuincyNyan_files/api.svg"><img alt="Top Langs" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" style="color:transparent;width:auto;height:auto" src="./QuincyNyan_files/saved_resource.svg"></div></div><p class="para">I mainly code in JavaScript, but I'm currently learning Python too! My first language was Java, and I'm looking forward to learning C++ in the future. Feel free to reach out to me and collaborate. DMs are always open, but don't expect me to be a coding expert. Even though I've been coding for the past 3 years, I still consider myself a beginner, and I may need your help more than you need mine! XD</p><p class="para">All of my repos are free to use. You can copy them, duplicate them, do whatever you want with them! If you need any help with my messy, dirty spaghetti code, just let me know! I'm always happy to help (not because I'm angry you're using my code without my permission, I really don't mind!). Welp, have a super cute day! 😊🌸🌟</p></div></div><script src="./QuincyNyan_files/react-refresh.js.download"></script><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"development","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script><div id="__next-build-watcher" style="position: fixed; bottom: 10px; right: 20px; width: 0px; height: 0px; z-index: 99999;"><template shadowrootmode="open"><div id="container">
+    <div id="icon-wrapper">
+      <svg viewBox="0 0 226 200">
+        <defs>
+          <lineargradient x1="114.720775%" y1="181.283245%" x2="39.5399306%" y2="100%" id="linear-gradient">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+          </lineargradient>
+        </defs>
+        <g id="icon-group" fill="none" stroke="url(#linear-gradient)" stroke-width="18">
+          <path d="M113,5.08219117 L4.28393801,197.5 L221.716062,197.5 L113,5.08219117 Z"></path>
+        </g>
+      </svg>
+    </div>
+  </div><style>
+    #container {
+      position: absolute;
+      bottom: 10px;
+      right: 30px;
+
+      border-radius: 3px;
+      background: #000;
+      color: #fff;
+      font: initial;
+      cursor: initial;
+      letter-spacing: initial;
+      text-shadow: initial;
+      text-transform: initial;
+      visibility: initial;
+
+      padding: 7px 10px 8px 10px;
+      align-items: center;
+      box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+      display: none;
+      opacity: 0;
+      transition: opacity 0.1s ease, bottom 0.1s ease;
+      animation: fade-in 0.1s ease-in-out;
+    }
+
+    #container.visible {
+      display: flex;
+    }
+
+    #container.building {
+      bottom: 20px;
+      opacity: 1;
+    }
+
+    #icon-wrapper {
+      width: 16px;
+      height: 16px;
+    }
+
+    #icon-wrapper > svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    #icon-group {
+      animation: strokedash 1s ease-in-out both infinite;
+    }
+
+    @keyframes fade-in {
+      from {
+        bottom: 10px;
+        opacity: 0;
+      }
+      to {
+        bottom: 20px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes strokedash {
+      0% {
+        stroke-dasharray: 0 226;
+      }
+      80%,
+      100% {
+        stroke-dasharray: 659 226;
+      }
+    }
+  </style></template></div><next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;"></p></next-route-announcer></body></html>
