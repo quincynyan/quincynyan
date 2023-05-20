@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Quincy Nyan's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 20, Total Commits in 2023 : 20, Total PRs: 11, Total Issues: 11, Contributed to (last year): 8</desc>
+        <desc id="descId">Total Stars Earned: 21, Total Commits in 2023 : 21, Total PRs: 11, Total Issues: 11, Contributed to (last year): 7</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -67,7 +67,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 126.15222851017639;
+        stroke-dashoffset: 126.01289946555227;
       }
     }
   
@@ -156,7 +156,7 @@
         x="219.01"
         y="12.5"
         data-testid="stars"
-      >20</text>
+      >21</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -171,7 +171,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >193</text>
+      >213</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -216,7 +216,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >8</text>
+      >7</text>
     </g>
   </g>
     </svg>
