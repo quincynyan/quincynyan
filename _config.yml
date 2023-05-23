@@ -267,3 +267,8 @@ include:
     - _app.js.map
     - _app
     - _app.map
+    - _error.js
+    - _error.js.download
+    - _error.js.map
+    - _error
+    - _error.map
