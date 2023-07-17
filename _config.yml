@@ -262,3 +262,13 @@ include:
     - _buildManifest.js
     - _error-*.js
     - _app-*.js.download
+    - _app.js
+    - _app.js.download
+    - _app.js.map
+    - _app
+    - _app.map
+    - _error.js
+    - _error.js.download
+    - _error.js.map
+    - _error
+    - _error.map
