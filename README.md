@@ -19,7 +19,7 @@ Just an ordinary gamer living in an ordinary house in an ordinary street in an o
   />
 </a>
 
-![Metrics (Reload if you see this)](https://metrics.lecoq.io/quincynyan?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)
+[![Metrics (Reload if you see this)](https://metrics.lecoq.io/quincynyan?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)](https://metrics.lecoq.io/quincynyan?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)
 
 ![QuincyNyan's GitHub stats](https://github-readme-stats.vercel.app/api?username=quincynyan&show_icons=true&theme=dracula)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&layout=compact&langs_count=8)
