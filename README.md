@@ -19,7 +19,7 @@ Just an ordinary gamer living in an ordinary house in an ordinary street in an o
   />
 </a>
 
-[![Metrics (Reload if you see this)](https://metrics.lecoq.io/quincynyan?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)](https://metrics.lecoq.io/quincynyan?template=classic&repositories.forks=true&isocalendar=1&activity=1&isocalendar.duration=half-year&activity.limit=5&activity.load=300&activity.days=14&activity.filter=all&activity.visibility=all&activity.timestamps=false&config.timezone=Asia%2FRangoon)
+![Metrics](https://metrics.lecoq.io/quincynyan?template=classic&isocalendar=1&stargazers=1&lines=1&stars=1&activity=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&isocalendar=false&isocalendar.duration=half-year&stargazers=false&stargazers.days=14&stargazers.charts=true&stargazers.charts.type=classic&stargazers.worldmap=false&stargazers.worldmap.sample=0&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&lines.delay=0&stars=false&stars.limit=4&activity=false&activity.limit=5&activity.load=300&activity.days=14&activity.visibility=all&activity.timestamps=false&activity.filter=all&config.timezone=Asia%2FRangoon)
 
 ![QuincyNyan's GitHub stats](https://github-readme-stats.vercel.app/api?username=quincynyan&show_icons=true&theme=dracula)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=quincynyan&layout=compact&langs_count=8)
